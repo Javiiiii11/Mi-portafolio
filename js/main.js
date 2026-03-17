@@ -105,7 +105,7 @@ const certData = {
     title: 'Power BI',
     issuer: 'Google / Santander Open Academy',
     date: 'Completado en 2026',
-    image: 'certificados/Power_BI.png'
+    image: 'certificados/power_bi.png'
   }
 };
 
