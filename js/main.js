@@ -107,6 +107,12 @@ const certData = {
     date: 'Completado en 2026',
     image: 'certificados/power_bi.png'
   }
+  ,'seguridad-digital': {
+    title: 'Seguridad digital para tu día a día',
+    issuer: 'Google / Santander Open Academy',
+    date: 'Completado en 2026',
+    image: 'certificados/Seguridad_digital_para_tu_dia_a_dia.png'
+  }
 };
 
 document.querySelectorAll('.cert-view-btn').forEach(btn => {
