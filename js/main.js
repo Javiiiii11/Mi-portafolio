@@ -106,12 +106,24 @@ const certData = {
     issuer: 'Google / Santander Open Academy',
     date: 'Completado en 2026',
     image: 'certificados/power_bi.png'
-  }
-  ,'seguridad-digital': {
+  },
+  'seguridad-digital': {
     title: 'Seguridad digital para tu día a día',
     issuer: 'Google / Santander Open Academy',
     date: 'Completado en 2026',
     image: 'certificados/Seguridad_digital_para_tu_dia_a_dia.png'
+  },
+  'excel': {
+    title: 'Excel',
+    issuer: 'Google / Santander Open Academy',
+    date: 'Completado en 2026',
+    image: 'certificados/excel.png'
+  },
+  'excel-avanzado': {
+    title: 'Excel – de intermedio a avanzado',
+    issuer: 'Google / Santander Open Academy',
+    date: 'Completado en 2026',
+    image: 'certificados/excel2.png'
   }
 };
 
