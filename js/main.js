@@ -124,6 +124,18 @@ const certData = {
     issuer: 'Google / Santander Open Academy',
     date: 'Completado en 2026',
     image: 'certificados/excel2.png'
+  },
+  'programar-app-desde-cero': {
+    title: 'Cómo Programar Aplicaciones Desde cero',
+    issuer: 'HoyAprendo',
+    date: 'Completado en 2026',
+    image: 'certificados/Cómo Programar Aplicaciones Desde cero .png'
+  },
+  'pag-wordpress': {
+    title: 'Cómo Crear una Página Web con WordPress',
+    issuer: 'HoyAprendo',
+    date: 'Completado en 2026',
+    image: 'certificados/Curso paginas web en Wordpress.png'
   }
 };
 
