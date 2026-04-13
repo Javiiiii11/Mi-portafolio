@@ -111,7 +111,7 @@ const certData = {
     title: 'Power BI Intermedio: Análisis y modelado de datos',
     issuer: 'Google / Santander Open Academy',
     date: 'Completado en 2026',
-    image: 'certificados/Power BI intermedio analisis y modelado de datos.png'
+    image: 'certificados/power-bi-intermedio-analisis-modelado-datos.png'
   },
   'seguridad-digital': {
     title: 'Seguridad digital para tu día a día',
@@ -147,7 +147,7 @@ const certData = {
     title: 'Aprende Diseño en Canva',
     issuer: 'HoyAprendo',
     date: 'Completado en 2026',
-    image: 'certificados/Aprende Diseño en Canva.png'
+    image: 'certificados/aprende-diseno-en-canva.png'
   }
 };
 
