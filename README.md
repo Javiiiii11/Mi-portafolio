@@ -84,11 +84,4 @@ git push origin nuevo-portfolio
 
 ## 📄 Créditos y atribución
 
-Este proyecto está basado en el portafolio original de **David Heckhoff** → [david-hckh.com](https://david-hckh.com)
-
-Si usas este proyecto o partes sustanciales de su código fuente, debes conservar la atribución:
-- Mantener los comentarios de crédito existentes en el código
-- Mantener esta sección de atribución en el README
-- Incluir una referencia visible al proyecto original en trabajos derivados
-
-La reutilización comercial o redistribución de partes sustanciales sin permiso está prohibida.
+Basado en el portafolio original de David Heckhoff → david-hckh.com
