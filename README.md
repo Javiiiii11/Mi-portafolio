@@ -1,77 +1,77 @@
-# Javier Rodríguez Jiménez — Portfolio (2025)
+# Javier Rodríguez Jiménez — Portafolio (2026)
 
 🌐 **[javiiiii11.github.io/Mi-portafolio](https://javiiiii11.github.io/Mi-portafolio/)**
 
-Personal portfolio featuring project case studies, lightweight 3D and shader demos, and bilingual copy (English & German).
+Portafolio personal con casos de estudio de proyectos, demos 3D y shaders, y contenido bilingüe (inglés y alemán).
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Stack tecnológico
 
-| Layer | Technology |
-|-------|-----------|
+| Capa | Tecnología |
+|------|-----------|
 | Framework | Vue 3 (`<script setup>`) + TypeScript |
 | Bundler | Vite |
-| Motion | GSAP + Lenis |
+| Animación | GSAP + Lenis |
 | 3D / Shaders | three.js + GLSL via `vite-plugin-glsl` |
 | Audio | Howler |
-| Styles | SCSS with shared mixins |
-| i18n | Custom i18n helpers |
+| Estilos | SCSS con mixins compartidos |
+| i18n | Helpers i18n propios |
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Primeros pasos
 
 ```bash
-# Install dependencies
+# Instalar dependencias
 npm install
 
-# Start dev server (localhost:3000)
+# Iniciar servidor de desarrollo (localhost:3000)
 npm run dev
 ```
 
 ## 📦 Scripts
 
-| Command | Description |
+| Comando | Descripción |
 |---------|-------------|
-| `npm run dev` | Dev server on port **3000** (`strictPort`) |
-| `npm run build` | Type-check then production bundle to `docs/` |
-| `npm run preview` | Serve the production build locally |
-| `npm run typecheck` | Type-check only (`vue-tsc -b`) |
+| `npm run dev` | Servidor de desarrollo en el puerto **3000** (`strictPort`) |
+| `npm run build` | Comprobación de tipos y bundle de producción en `docs/` |
+| `npm run preview` | Servir el build de producción en local |
+| `npm run typecheck` | Solo comprobación de tipos (`vue-tsc -b`) |
 
 ---
 
-## 📁 Project Structure
+## 📁 Estructura del proyecto
 
 ```
 src/
-├── assets/          # Images, videos, sounds, styles
-├── components/      # Shared UI components
+├── assets/          # Imágenes, vídeos, sonidos, estilos
+├── components/      # Componentes UI compartidos
 ├── content/
-│   ├── projects/    # Case studies (EN + DE)
-│   └── credentials/ # Name, studies, certifications
+│   ├── projects/    # Casos de estudio (EN + DE)
+│   └── credentials/ # Nombre, estudios, certificaciones
 ├── features/
-│   └── home/        # Home section layout
-├── i18n/            # Translation messages
-└── three/           # WebGL / GLSL scenes
+│   └── home/        # Layout de secciones de inicio
+├── i18n/            # Mensajes de traducción
+└── three/           # Escenas WebGL / GLSL
 ```
 
 ---
 
-## ✏️ Customization
+## ✏️ Personalización
 
-- **Projects** — Add or edit files in `src/content/projects/{en,de}/<slug>.ts`. Slugs must match `projectIds` in `src/content/projects/index.ts`.
-- **Previews / listing** — `src/content/projects/previews/`
-- **Tags** — Variants and labels in `src/components/tagVariants.ts`
-- **Personal info** — Name, studies, and certifications in `src/content/credentials/index.ts` and `src/i18n/messages/namespaces/common/{en,de}.json`
-- **Visual assets** — Images, thumbnails, videos, and sounds under `src/assets/`, `public/`, and `sounds/`
-- **Section order** — Reorder home sections in `src/features/home/components/Home.vue`
+- **Proyectos** — Añade o edita archivos en `src/content/projects/{en,de}/<slug>.ts`. Los slugs deben coincidir con `projectIds` en `src/content/projects/index.ts`.
+- **Previews / listado** — `src/content/projects/previews/`
+- **Etiquetas** — Variantes y etiquetas en `src/components/tagVariants.ts`
+- **Datos personales** — Nombre, estudios y certificaciones en `src/content/credentials/index.ts` y `src/i18n/messages/namespaces/common/{en,de}.json`
+- **Recursos visuales** — Imágenes, miniaturas, vídeos y sonidos en `src/assets/`, `public/` y `sounds/`
+- **Orden de secciones** — Reordena las secciones de inicio en `src/features/home/components/Home.vue`
 
 ---
 
-## 🌍 Deployment
+## 🌍 Despliegue
 
-Hosted on **GitHub Pages** from the `nuevo-portfolio` branch (`/docs` folder).
+Publicado en **GitHub Pages** desde la rama `nuevo-portfolio` (carpeta `/docs`).
 
 ```bash
 npm run build
@@ -82,13 +82,13 @@ git push origin nuevo-portfolio
 
 ---
 
-## 📄 Credits & Attribution
+## 📄 Créditos y atribución
 
-This project is based on the original portfolio by **David Heckhoff** → [david-hckh.com](https://david-hckh.com)
+Este proyecto está basado en el portafolio original de **David Heckhoff** → [david-hckh.com](https://david-hckh.com)
 
-If you use this project or substantial parts of its source code, attribution must be preserved:
-- Keep existing credit comments in the source code
-- Keep this attribution section in the README
-- Include a visible reference to the original project in derivative works
+Si usas este proyecto o partes sustanciales de su código fuente, debes conservar la atribución:
+- Mantener los comentarios de crédito existentes en el código
+- Mantener esta sección de atribución en el README
+- Incluir una referencia visible al proyecto original en trabajos derivados
 
-Commercial reuse or redistribution of substantial portions without permission is prohibited.
+La reutilización comercial o redistribución de partes sustanciales sin permiso está prohibida.
