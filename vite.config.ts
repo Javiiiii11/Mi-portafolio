@@ -53,7 +53,7 @@ export default defineConfig({
   },
 
   build: {
-    outDir: "./dist",
+    outDir: "docs",
     sourcemap: false,
     emptyOutDir: true,
     chunkSizeWarningLimit: 1000,
