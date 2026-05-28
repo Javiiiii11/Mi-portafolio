@@ -1,597 +1,67 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Javier Rodríguez — Dev & Ciberseguridad</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="estilos/css.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
+    <title>Javier Rodríguez Jiménez - Formación, certificados y desarrollo</title>
+    <meta
+      name="description"
+      content="Portafolio personal de Javier Rodríguez Jiménez con formación, títulos, certificados y proyectos de desarrollo, sistemas y ciberseguridad."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://david-hckh.com/" />
 
-<nav>
-  <div class="nav-logo">// Javier.dev</div>
-  <ul class="nav-links">
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#sobre">Sobre mí</a></li>
-    <li><a href="#trayectoria">Trayectoria</a></li>
-    <li><a href="#certificaciones">Certificaciones</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#habilidades">Skills</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-</nav>
+    <meta property="og:title" content="Javier Rodríguez Jiménez - Formación, certificados y desarrollo" />
+    <meta
+      property="og:description"
+      content="Portafolio personal de Javier Rodríguez Jiménez con formación, títulos, certificados y proyectos de desarrollo, sistemas y ciberseguridad."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://david-hckh.com/" />
+    <meta property="og:image" content="https://david-hckh.com/meta/og-image.webp" />
 
-<section id="inicio" class="hero">
-  <div class="hero-left reveal">
-    <div class="hero-label">Disponible para oportunidades</div>
-    <h1>Javier<br>Rodríguez<span class="line-accent">Jiménez</span><span class="line-dim">Full Stack & Ciberseguridad</span></h1>
-    <p class="hero-desc">Desarrollador de aplicaciones multiplataforma con especialización creciente en ciberseguridad. 20 años. Aprendiz rápido, curioso, comprometido.</p>
-    <div class="hero-badges">
-      <span class="badge active">🔐 Ciberseguridad</span>
-      <span class="badge active">📱 Full Stack</span>
-      <span class="badge">🤖 Android / Kotlin</span>
-      <span class="badge">🐍 Python</span>
-      <span class="badge">☕ Java</span>
-      <span class="badge">🎮 Godot</span>
-    </div>
-    <div class="hero-ctas">
-      <a href="#proyectos" class="btn btn-fill">Ver proyectos →</a>
-      <a href="#contacto" class="btn btn-outline">Contactar</a>
-    </div>
-  </div>
-  <div class="hero-photo-col reveal">
-    <div class="photo-wrapper">
-      <div class="photo-frame">
-        <img src="imagenes/javier.jpg" alt="Javier Rodríguez Jiménez" onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-family:Space Mono,monospace;font-size:0.62rem;color:rgba(180,255,60,0.35);text-align:center;padding:1.5rem;line-height:2.2;letter-spacing:0.1em;text-transform:uppercase\'>[foto.jpg]</div>');">
-        <div class="photo-scanlines"></div>
-        <div class="photo-tint"></div>
-      </div>
-      <div class="photo-corner tl"></div>
-      <div class="photo-corner tr"></div>
-      <div class="photo-corner bl"></div>
-      <div class="photo-corner br"></div>
-      <div class="photo-deco-line left"></div>
-      <div class="photo-deco-line bottom"></div>
-    </div>
-    <div class="photo-tags">
-      <div class="photo-tag available">Abierto a oportunidades</div>
-      <div class="photo-tag stack">Full Stack · Ciberseguridad · Mobile</div>
-    </div>
-  </div>
-  <div class="hero-right reveal">
-    <div class="terminal">
-      <div class="terminal-bar">
-        <div class="t-dot"></div>
-        <div class="t-dot"></div>
-        <div class="t-dot"></div>
-        <span class="terminal-title">whoami.sh</span>
-      </div>
-      <div class="terminal-body">
-        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">whoami</span></div>
-        <div class="t-line t-out"><span class="t-key">name</span> → <span class="t-val">Javier Rodríguez Jiménez</span></div>
-        <div class="t-line t-out"><span class="t-key">age</span> → <span class="t-val">20</span></div>
-        <div class="t-line t-out"><span class="t-key">role</span> → <span class="t-val">Dev Full Stack</span></div>
-        <br>
-        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat estudios.txt</span></div>
-        <div class="t-line t-out"><span class="t-sec">✓</span> Grado Medio SMR</div>
-        <div class="t-line t-out"><span class="t-sec">✓</span> Grado Superior DAM</div>
-        <div class="t-line t-out"><span class="t-accent2" style="color:var(--accent2)">⚡</span> Máster Ciberseguridad TI (en curso)</div>
-        <br>
-        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat stack.json</span></div>
-        <div class="t-line t-out">{</div>
-        <div class="t-line t-out">&nbsp;&nbsp;<span class="t-key">"frontend"</span>: <span class="t-val">"Angular, HTML, CSS, JS"</span>,</div>
-        <div class="t-line t-out">&nbsp;&nbsp;<span class="t-key">"mobile"</span>: <span class="t-val">"Kotlin, Jetpack Compose"</span>,</div>
-        <div class="t-line t-out">&nbsp;&nbsp;<span class="t-key">"backend"</span>: <span class="t-val">"Python, Java, Flask"</span>,</div>
-        <div class="t-line t-out">&nbsp;&nbsp;<span class="t-key">"db"</span>: <span class="t-val">"MySQL, Firebase, MongoDB"</span></div>
-        <div class="t-line t-out">}</div>
-        <br>
-        <div class="t-line"><span class="t-prompt">$</span><span class="t-cursor"></span></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Javier Rodríguez Jiménez - Formación, certificados y desarrollo" />
+    <meta
+      name="twitter:description"
+      content="Portafolio personal de Javier Rodríguez Jiménez con formación, títulos, certificados y proyectos de desarrollo, sistemas y ciberseguridad."
+    />
+    <meta name="twitter:image" content="https://david-hckh.com/meta/twitter-image.webp" />
 
-<div class="stats-row reveal">
-  <div class="stat"><div class="stat-num">17+</div><div class="stat-label">Proyectos en GitHub</div></div>
-  <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Titulaciones obtenidas</div></div>
-  <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Lenguajes y frameworks</div></div>
-  <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Certificaciones completadas</div></div>
-</div>
+    <link rel="preload" href="/fonts/urbanist-400.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/urbanist-700.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/urbanist-900.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/pro-font-windows-400.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/pro-font-windows-700.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 
-<section id="sobre">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">01 — Sobre mí</div>
-      <div class="section-title">El desarrollador<br>detrás del código</div>
-    </div>
-    <div class="section-num">01</div>
-  </div>
-  <div class="about-grid reveal">
-    <div class="about-text">
-      <p>Soy <strong>Javier Rodríguez Jiménez</strong>, tengo 20 años y me considero una persona proactiva, responsable y con una gran capacidad de adaptación y aprendizaje. Me desenvuelvo con soltura tanto en trabajo en equipo como de forma autónoma, afrontando cada reto con actitud positiva y ganas de superación.</p>
-      <p>Busco seguir creciendo profesionalmente en el ámbito de la informática y ciberseguridad, donde actualmente continúo formándome con un <strong>Máster especializado</strong>. Me apasiona trabajar en entornos dinámicos donde pueda aportar valor real y desarrollar nuevas habilidades.</p>
-      <p>Más allá del código, cuento con una faceta versátil que incluye experiencia como <strong>monitor de ocio y tiempo libre</strong>, <strong>socorrista certificado</strong> y <strong>cinturón negro de judo</strong> — disciplinas que me han forjado en liderazgo, trabajo en equipo y toma de decisiones bajo presión.</p>
-    </div>
-    <div class="about-cards">
-      <div class="about-card">
-        <div class="about-card-icon">📚</div>
-        <h4>Estudios</h4>
-        <ul>
-          <li>ESO</li><li>G.M. SMR</li><li>G.S. DAM</li><li>Máster Ciberseg. (en curso)</li>
-        </ul>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">🏅</div>
-        <h4>Otros títulos</h4>
-        <ul>
-          <li>Carnet B, A1 y A2</li><li>Monitor O.T.L.</li><li>Socorrista Piscinas</li><li>DEA / Desfibrilador (ERC)</li><li>Coordinador Socorrismo</li><li>Cinturón Negro Judo</li>
-        </ul>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">💻</div>
-        <h4>Stack</h4>
-        <ul>
-          <li>Angular, HTML, CSS, JS</li><li>Kotlin + Jetpack Compose</li><li>Python, Java, Flask</li><li>MySQL, Firebase, MongoDB</li>
-        </ul>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">🧠</div>
-        <h4>Soft skills</h4>
-        <ul>
-          <li>Liderazgo de equipos</li><li>Decisiones bajo presión</li><li>Compromiso y disciplina</li><li>Aprendizaje rápido</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    <link rel="icon" type="image/png" href="/meta/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/meta/favicon.svg" />
+    <link rel="shortcut icon" href="/meta/favicon.ico" />
 
-<section id="trayectoria">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">02 — Trayectoria</div>
-      <div class="section-title">Cómo llegué<br>hasta aquí</div>
-    </div>
-    <div class="section-num">02</div>
-  </div>
-  <div class="trajectory-list reveal">
-    <div class="traj-item">
-      <div class="traj-left"><span class="traj-tag">Desarrollo</span><div class="traj-title">Full Stack Multiplataforma</div></div>
-      <div class="traj-right"><div class="traj-sub">Frontend · Mobile · Backend · Bases de datos</div><p class="traj-desc">Desarrollo web con Angular, HTML, CSS y JavaScript. Aplicaciones móviles nativas Android con Kotlin y Jetpack Compose. Backend con Python y Java. Experiencia con MySQL, Firebase y MongoDB. TFG completado en DAM con una app Android completa conectada a backend propio en Flask.</p></div>
-    </div>
-    <div class="traj-item">
-      <div class="traj-left"><span class="traj-tag">Seguridad</span><div class="traj-title">Ciberseguridad</div></div>
-      <div class="traj-right"><div class="traj-sub">Máster en Ciberseguridad en Entornos TI · En curso</div><p class="traj-desc">Formación activa en análisis de vulnerabilidades, criptografía, OWASP, OSINT y análisis de malware. Enfoque práctico aplicando seguridad desde el diseño de aplicaciones hasta auditorías de sistemas. Proyectos como el generador de diccionarios para fuerza bruta.</p></div>
-    </div>
-    <div class="traj-item">
-      <div class="traj-left"><span class="traj-tag">Polivalente</span><div class="traj-title">Perfil Versátil</div></div>
-      <div class="traj-right"><div class="traj-sub">Monitor · Socorrista · Coordinador · Judoka</div><p class="traj-desc">Monitor de Ocio y Tiempo Libre titulado. Socorrista de piscinas certificado con DEA y primeros auxilios (ERC). Coordinador de servicios de socorrismo. Cinturón negro de judo: disciplina, perseverancia, liderazgo y trabajo en equipo forjados desde la práctica real.</p></div>
-    </div>
-  </div>
-</section>
+    <meta name="theme-color" content="#dfd1bc" />
+  </head>
+  <body class="is-loading">
+    <svg style="display: none" viewBox="0 0 56 61" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path
+          id="logo-path"
+          d="M3 14 24 2C28 0 28 0 32 2L53 14C56 16 56 17 56 19L56 43C56 46 55 47 51 49L32 59C28 61 28 61 24 59L5 49C1 47 0 46 0 43L0 19C0 17 0 16 3 14M28 4 5 17 28 28 51 17 28 4M53 20 30 31 30 56 53 44 53 20M40 42 33 35C33 35 32 34 33 33 34 32 35 33 36 34L36 34 43 41C44 42 44 42 43 43L35 51C35 51 34 52 33 51 32 50 33 49 33 49L40 42M16 42 23 35C23 35 24 34 23 33 22 32 21 33 20 34L13 41C12 42 12 42 13 43L21 51C21 51 22 52 23 51 24 50 23 49 23 49L16 42"
+        ></path>
+      </defs>
+    </svg>
+    <div id="app"></div>
+    <div class="preloader">
+      <svg class="preloader-svg" viewBox="0 0 56 61" xmlns="http://www.w3.org/2000/svg">
+        <mask id="preloader-mask">
+          <rect fill="black" height="61" width="61"></rect>
+          <rect fill="white" height="61" width="61" class="preloader-rect" style="transform: scaleY(0)"></rect>
+        </mask>
 
-<section id="certificaciones">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">03 — Certificaciones</div>
-      <div class="section-title">Formación<br>continua</div>
+        <use href="#logo-path" class="preloader-path" opacity="0.3"></use>
+        <use href="#logo-path" class="preloader-path" mask="url(#preloader-mask)"></use>
+      </svg>
     </div>
-    <div class="section-num">03</div>
-  </div>
-  <div class="certifications-grid reveal">
-    <div class="cert-category">
-      <div class="cert-category-header"><span class="cert-icon">🔐</span><h3>Ciberseguridad</h3></div>
-      <div class="cert-list">
-        <div class="cert-card">
-          <div class="cert-title">Curso de Google Hacking II Dorks Comandos para Hackear</div>
-          <div class="cert-issuer">Udemy</div><div class="cert-date">2025</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="google-hacking-ii">👁️ Ver certificado</button>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Seguridad digital para tu día a día</div>
-          <div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="seguridad-digital">👁️ Ver certificado</button>
-        </div>
-      </div>
-    </div>
-    <div class="cert-category">
-      <div class="cert-category-header"><span class="cert-icon">💻</span><h3>Desarrollo</h3></div>
-      <div class="cert-list">
-        <div class="cert-card">
-          <div class="cert-title">Python</div>
-          <div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2024</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="google-python">👁️ Ver certificado</button>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Cursor con Python: desarrollo inteligente con IA</div>
-          <div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div>
-          <div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Cómo Programar Aplicaciones Desde cero</div>
-          <div class="cert-issuer">HoyAprendo</div><div class="cert-date">11 de abril de 2026</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="programar-app-desde-cero">👁️ Ver certificado</button>
-        </div>
-      </div>
-    </div>
-    <div class="cert-category">
-      <div class="cert-category-header"><span class="cert-icon">🎨</span><h3>Diseño y Web</h3></div>
-      <div class="cert-list">
-        <div class="cert-card">
-          <div class="cert-title">Curso paginas web en Wordpress</div>
-          <div class="cert-issuer">HoyAprendo</div><div class="cert-date">10 de abril de 2026</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="pag-wordpress">👁️ Ver certificado</button>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Aprende Diseño en Canva</div>
-          <div class="cert-issuer">HoyAprendo</div><div class="cert-date">2026</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="diseno-canva">👁️ Ver certificado</button>
-        </div>
-      </div>
-    </div>
-    <div class="cert-category">
-      <div class="cert-category-header"><span class="cert-icon">🤖</span><h3>IA</h3></div>
-      <div class="cert-list">
-        <div class="cert-card">
-          <div class="cert-title">Google: Inteligencia Artificial y productividad</div>
-          <div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2025</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="google-ai">👁️ Ver certificado</button>
-        </div>
-        <div class="cert-card"><div class="cert-title">Copilots sin calificación</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-        <div class="cert-card"><div class="cert-title">Fundamentos de ChatGPT</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-        <div class="cert-card"><div class="cert-title">Copilot: domina la IA en Microsoft 365</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-      </div>
-    </div>
-    <div class="cert-category">
-      <div class="cert-category-header"><span class="cert-icon">🌐</span><h3>Idiomas</h3></div>
-      <div class="cert-list">
-        <div class="cert-card">
-          <div class="cert-title">Business English: Listening and Communication skills - Part 1</div>
-          <div class="cert-issuer">Curso Santander</div>
-          <div class="cert-date">2026</div>
-          <div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Inglés para Entrevistas y Networking</div>
-          <div class="cert-issuer">Curso Santander</div>
-          <div class="cert-date">2026</div>
-          <div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div>
-        </div>
-      </div>
-    </div>
-    <div class="cert-category">
-      <div class="cert-category-header"><span class="cert-icon">📄</span><h3>Ofimatica</h3></div>
-      <div class="cert-list">
-        <div class="cert-card">
-          <div class="cert-title">Excel</div>
-          <div class="cert-issuer">Google / Santander Open Academy</div>
-          <div class="cert-date">2026</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="excel">👁️ Ver certificado</button>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Excel – de intermedio a avanzado</div>
-          <div class="cert-issuer">Google / Santander Open Academy</div>
-          <div class="cert-date">2026</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="excel-avanzado">👁️ Ver certificado</button>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Power BI</div>
-          <div class="cert-issuer">Google / Santander Open Academy</div>
-          <div class="cert-date">2026</div>
-          <div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div>
-          <button class="cert-view-btn" data-cert="power-bi">👁️ Ver certificado</button>
-        </div>
-        <div class="cert-card"><div class="cert-title">Power BI Intermedio: Análisis y modelado de datos</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #b4ff3c;">Completado</div><button class="cert-view-btn" data-cert="power-bi-intermedio">👁️ Ver certificado</button></div>
-        <div class="cert-card"><div class="cert-title">Introducción a la Ciencia de Datos</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-      </div>
-    </div>
-    <div class="cert-category">
-      <div class="cert-category-header"><span class="cert-icon">🚀</span><h3>Otros Certificados</h3></div>
-      <div class="cert-list">
-        <div class="cert-card"><div class="cert-title">Gestión de Proyectos y Fundamentos de metodología Agile</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-        <div class="cert-card"><div class="cert-title">Innovación y creatividad: desarrolla tu pensamiento creativo</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-        <div class="cert-card"><div class="cert-title">Storytelling en el Marketing Digital</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-        <div class="cert-card"><div class="cert-title">Liderazgo en el entorno digital</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-        <div class="cert-card"><div class="cert-title">English Fundamentals: Successful Networking and Interviews</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-        <div class="cert-card"><div class="cert-title">Marketing automation</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-        <div class="cert-card"><div class="cert-title">Lidera a Toda Velocidad: Lecciones de la Formula 1®</div><div class="cert-issuer">Google / Santander Open Academy</div><div class="cert-date">2026</div><div class="cert-badge" style="--badge-color: #ff5c3c;">Pendiente</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="proyectos">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">04 — Proyectos</div>
-      <div class="section-title">Lo que he<br>construido</div>
-    </div>
-    <div class="section-num">04</div>
-  </div>
-  <div class="projects-grid reveal">
-    <div class="project-card">
-      <div class="project-num">Proyecto 01 — TFG DAM</div>
-      <h3>💪 GymRace</h3>
-      <p>App Android de gimnasio desarrollada como Trabajo de Fin de Grado del G.S. DAM. Gestión de rutinas, seguimiento de entrenamientos, elección de dietas detalladas y componente social entre usuarios. Incluye además un apartado de desafíos entre amigos para motivar el entrenamiento. Backend propio en Flask conectado a Firebase.</p>
-      <div class="project-tags"><span class="ptag">Kotlin</span><span class="ptag">Jetpack Compose</span><span class="ptag">Firebase</span><span class="ptag">XML</span><span class="ptag">Python</span><span class="ptag">Flask</span><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
-      <a href="https://github.com/Javiiiii11/TFG.Gymrace" target="_blank" class="project-link">Ver en GitHub →</a>
-    </div>
-    <div class="project-card">
-      <div class="project-num">Proyecto 02 — Ciberseguridad</div>
-      <h3>🔐 Generador de contraseñas</h3>
-      <p>Herramienta de seguridad ofensiva para generar diccionarios de contraseñas totalmente personalizables. Útil para pruebas de penetración y ataques de fuerza bruta controlados en entornos de laboratorio.</p>
-      <div class="project-tags"><span class="ptag">Python</span><span class="ptag">CLI</span><span class="ptag">Pentest</span></div>
-      <a href="https://github.com/Javiiiii11/Generador-de-contrasenas-Javier" target="_blank" class="project-link">Ver en GitHub →</a>
-    </div>
-    <div class="project-card">
-      <div class="project-num">Proyecto 03 — Game Dev</div>
-      <h3>🎮 Termpest Duo</h3>
-      <p>Juego 2D en Godot de carreras multijugador local para dos jugadores. Compiten en mapas para recoger diamantes, desbloquear el portal y escapar antes que el rival.</p>
-      <div class="project-tags"><span class="ptag">GDScript</span><span class="ptag">Godot</span></div>
-      <a href="https://github.com/Javiiiii11/Juego-Godot-Termpest-Duo" target="_blank" class="project-link">Ver en GitHub →</a>
-    </div>
-    <div class="project-card">
-      <div class="project-num">Proyecto 04 — Web</div>
-      <h3>🌐 El Filete del Rincón</h3>
-      <p>Web completa para restaurante desarrollada en el G.S. DAM. Incluye visualización del menú, sistema de reservas y pedidos en línea. Diseño responsive y orientado al usuario.</p>
-      <div class="project-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">Responsive</span></div>
-      <a href="https://github.com/Javiiiii11/Restaurante-el-filete-del-rincon" target="_blank" class="project-link">Ver en GitHub →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ─── SECCIÓN HABILIDADES ─── -->
-<section id="habilidades">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">05 — Skills</div>
-      <div class="section-title">Herramientas<br>y tecnologías</div>
-    </div>
-    <div class="section-num">05</div>
-  </div>
-  <div class="skills-container reveal" id="skills-grid">
-
-    <!-- Frontend -->
-    <div class="skill-group">
-      <div class="skill-group-title">Frontend</div>
-      <div class="skill-item">
-        <div class="skill-header"><span>HTML</span><span class="skill-pct">100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="100"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>CSS</span><span class="skill-pct">100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="100"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>JavaScript</span><span class="skill-pct">75%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Angular</span><span class="skill-pct">70%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
-      </div>
-    </div>
-
-    <!-- Backend -->
-    <div class="skill-group">
-      <div class="skill-group-title">Backend</div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Python</span><span class="skill-pct">100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="100"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Java</span><span class="skill-pct">90%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Flask</span><span class="skill-pct">100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="100"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Django</span><span class="skill-pct">70%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
-      </div>
-    </div>
-
-    <!-- Ciberseguridad -->
-    <div class="skill-group">
-      <div class="skill-group-title">Ciberseguridad</div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Análisis de Vulnerabilidades</span><span class="skill-pct">80%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Criptografía</span><span class="skill-pct">90%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Análisis y uso de malware</span><span class="skill-pct">80%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>OSINT</span><span class="skill-pct">85%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
-      </div>
-    </div>
-
-    <!-- Mobile -->
-    <div class="skill-group">
-      <div class="skill-group-title">Mobile</div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Kotlin</span><span class="skill-pct">85%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Jetpack Compose</span><span class="skill-pct">85%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
-      </div>
-    </div>
-
-    <!-- Otros Lenguajes -->
-    <div class="skill-group">
-      <div class="skill-group-title">Otros Lenguajes</div>
-      <div class="skill-item">
-        <div class="skill-header"><span>GDScript</span><span class="skill-pct">90%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>XML</span><span class="skill-pct">75%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>JSON</span><span class="skill-pct">75%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>SQL</span><span class="skill-pct">50%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="50"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Bash</span><span class="skill-pct">70%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>PowerShell</span><span class="skill-pct">70%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
-      </div>
-    </div>
-
-    <!-- Aplicaciones Microsoft -->
-    <div class="skill-group">
-      <div class="skill-group-title">Aplicaciones Microsoft</div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Word</span><span class="skill-pct">100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="100"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Excel</span><span class="skill-pct">100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="100"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>PowerPoint</span><span class="skill-pct">100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="100"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Power BI</span><span class="skill-pct">80%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Access</span><span class="skill-pct">50%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="50"></div></div>
-      </div>
-    </div>
-
-    <!-- Sistemas Operativos -->
-    <div class="skill-group">
-      <div class="skill-group-title">Sistemas Operativos</div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Windows</span><span class="skill-pct">100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="100"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Linux</span><span class="skill-pct">80%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>MAC</span><span class="skill-pct">10%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="10"></div></div>
-      </div>
-    </div>
-
-    <!-- Idiomas -->
-    <div class="skill-group">
-      <div class="skill-group-title">Idiomas</div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Español</span><span class="skill-pct">100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="100"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span>Inglés</span><span class="skill-pct">50%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="50"></div></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="contacto">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">06 — Contacto</div>
-      <div class="section-title">Mi información<br>de contacto</div>
-    </div>
-    <div class="section-num">06</div>
-  </div>
-  <div class="contact-main reveal">
-    <div class="contact-card-main">
-      <div class="contact-icon-main">📡</div>
-      <h2>¿Dónde encontrarme?</h2>
-      <p>Si quieres ponerte en contacto conmigo, tienes varias formas de hacerlo. Elige la que más te convenga — respondo rápido.</p>
-      <div class="contact-divider"></div>
-      <div class="contact-channels">
-        <a href="tel:+34640778109" class="contact-channel-card">
-          <div class="channel-icon">📞</div>
-          <div class="channel-text"><div class="channel-label">Teléfono</div><div class="channel-value">+34 640 778 109</div></div>
-          <div class="channel-arrow">→</div>
-        </a>
-        <a href="mailto:javier.rod.jim2005@email.com" class="contact-channel-card">
-          <div class="channel-icon">✉️</div>
-          <div class="channel-text"><div class="channel-label">Email</div><div class="channel-value">javier.rod.jim2005@email.com</div></div>
-          <div class="channel-arrow">→</div>
-        </a>
-        <a href="https://www.linkedin.com/in/javier-rodr%C3%ADguez-181701250/" target="_blank" class="contact-channel-card">
-          <div class="channel-icon">💼</div>
-          <div class="channel-text"><div class="channel-label">LinkedIn</div><div class="channel-value">Javier Rodríguez</div></div>
-          <div class="channel-arrow">→</div>
-        </a>
-        <a href="https://github.com/Javiiiii11" target="_blank" class="contact-channel-card">
-          <div class="channel-icon">🐙</div>
-          <div class="channel-text"><div class="channel-label">GitHub</div><div class="channel-value">@Javiiiii11</div></div>
-          <div class="channel-arrow">→</div>
-        </a>
-      </div>
-    </div>
-    <div class="contact-info-grid">
-      <div class="contact-info-card"><div class="info-card-icon">⚡</div><h4>Respuesta Rápida</h4><p>Intento responder en máximo 24 horas</p></div>
-      <div class="contact-info-card"><div class="info-card-icon">🎯</div><h4>Disponible Ahora</h4><p>Abierto a oportunidades y proyectos</p></div>
-      <div class="contact-info-card"><div class="info-card-icon">🌍</div><h4>Ubicación</h4><p>Madrid, España · Flexible para remoto</p></div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-copy">© 2026 Javier Rodríguez Jiménez</div>
-  <div class="footer-tag">// Diseñado & desarrollado con ❤️</div>
-</footer>
-
-<div id="certModal" class="cert-modal">
-  <div class="cert-modal-overlay" onclick="closeCertModal()"></div>
-  <div class="cert-modal-content">
-    <button class="cert-modal-close" onclick="closeCertModal()">✕</button>
-    <div class="cert-modal-inner">
-      <img id="certImage" src="" alt="Certificado" class="cert-modal-image">
-      <div class="cert-modal-info">
-        <h2 id="certTitle"></h2>
-        <p id="certIssuer"></p>
-        <p id="certDate"></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="js/main.js"></script>
-</body>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
 </html>
