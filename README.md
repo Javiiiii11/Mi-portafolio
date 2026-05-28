@@ -1,46 +1,94 @@
-# Portfolio (2025)
+# Javier Rodríguez Jiménez — Portfolio (2025)
 
-Personal portfolio site: project case studies, lightweight 3D and shader demos, bilingual copy (English and German).
+🌐 **[javiiiii11.github.io/Mi-portafolio](https://javiiiii11.github.io/Mi-portafolio/)**
 
-Built with **Vue 3**, **TypeScript**, and **Vite**. Motion via **GSAP** and **Lenis**, 3D via **three.js**, audio via **Howler**. GLSL is compiled through **vite-plugin-glsl**.
+Personal portfolio featuring project case studies, lightweight 3D and shader demos, and bilingual copy (English & German).
 
-## Scripts
+---
 
-| Command        | Description                          |
-| -------------- | ------------------------------------ |
-| `npm run dev`   | Dev server on port **3000** (`strictPort`) |
-| `npm run build` | `vue-tsc` then production bundle to `dist/` |
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Vue 3 (`<script setup>`) + TypeScript |
+| Bundler | Vite |
+| Motion | GSAP + Lenis |
+| 3D / Shaders | three.js + GLSL via `vite-plugin-glsl` |
+| Audio | Howler |
+| Styles | SCSS with shared mixins |
+| i18n | Custom i18n helpers |
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server (localhost:3000)
+npm run dev
+```
+
+## 📦 Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Dev server on port **3000** (`strictPort`) |
+| `npm run build` | Type-check then production bundle to `docs/` |
 | `npm run preview` | Serve the production build locally |
-| `npm run typecheck` | Typecheck only (`vue-tsc -b`) |
+| `npm run typecheck` | Type-check only (`vue-tsc -b`) |
 
-## Content
+---
 
-- **Projects**: `src/content/projects/{en,de}/<slug>.ts` — copy, tags, media, links. Slugs must align with `projectIds` in `src/content/projects/index.ts`.
-- **Previews / listing**: `src/content/projects/previews/`.
-- **Tags**: variants and labels live in `src/components/tagVariants.ts` (used by `Tag.vue` and content types).
-- **Personalización rápida**: change your name, study/certification entries, and section copy in `src/content/credentials/index.ts` and `src/i18n/messages/namespaces/common/{en,de}.json`.
-- **Visual assets**: update images, thumbnails, videos, and sounds under `src/assets/`, `public/`, and `sounds/`.
-- **Layout order**: reorder home sections in `src/features/home/components/Home.vue`.
+## 📁 Project Structure
 
-## Stack (high level)
+```
+src/
+├── assets/          # Images, videos, sounds, styles
+├── components/      # Shared UI components
+├── content/
+│   ├── projects/    # Case studies (EN + DE)
+│   └── credentials/ # Name, studies, certifications
+├── features/
+│   └── home/        # Home section layout
+├── i18n/            # Translation messages
+└── three/           # WebGL / GLSL scenes
+```
 
-- Vue 3 (`<script setup>`), SCSS with shared mixins (`src/assets/styles/`)
-- i18n helpers under `src/i18n/`
-- WebGL / GLSL under `src/three/` where applicable
+---
 
-## Credits & Attribution
+## ✏️ Customization
 
-This project was created and designed by David Heckhoff.
+- **Projects** — Add or edit files in `src/content/projects/{en,de}/<slug>.ts`. Slugs must match `projectIds` in `src/content/projects/index.ts`.
+- **Previews / listing** — `src/content/projects/previews/`
+- **Tags** — Variants and labels in `src/components/tagVariants.ts`
+- **Personal info** — Name, studies, and certifications in `src/content/credentials/index.ts` and `src/i18n/messages/namespaces/common/{en,de}.json`
+- **Visual assets** — Images, thumbnails, videos, and sounds under `src/assets/`, `public/`, and `sounds/`
+- **Section order** — Reorder home sections in `src/features/home/components/Home.vue`
 
-If you use this project or substantial parts of its source code as a base for your own portfolio or work, attribution must be preserved.
+---
 
-Please keep:
+## 🌍 Deployment
 
-- existing credit comments in the source code
-- this attribution section in the README
-- a visible reference to the original project/repository in derivative works
+Hosted on **GitHub Pages** from the `nuevo-portfolio` branch (`/docs` folder).
 
-Original portfolio:
--> https://david-hckh.com
+```bash
+npm run build
+git add .
+git commit -m "deploy"
+git push origin nuevo-portfolio
+```
 
-Commercial reuse or redistribution of substantial portions of this project without permission is prohibited.
+---
+
+## 📄 Credits & Attribution
+
+This project is based on the original portfolio by **David Heckhoff** → [david-hckh.com](https://david-hckh.com)
+
+If you use this project or substantial parts of its source code, attribution must be preserved:
+- Keep existing credit comments in the source code
+- Keep this attribution section in the README
+- Include a visible reference to the original project in derivative works
+
+Commercial reuse or redistribution of substantial portions without permission is prohibited.
