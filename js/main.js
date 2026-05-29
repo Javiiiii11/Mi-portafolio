@@ -119,6 +119,12 @@ const certData = {
     date: 'Completado en 2026',
     image: 'certificados/Seguridad_digital_para_tu_dia_a_dia.png'
   },
+  'domina-gemini': {
+    title: 'Domina la IA con Gemini',
+    issuer: 'Google Gemini / Santander Open Academy',
+    date: 'Completado el 26 de mayo de 2026',
+    image: 'certificados/Domina_la_IA_con_Gemini.png'
+  },
   'excel': {
     title: 'Excel',
     issuer: 'Google / Santander Open Academy',
