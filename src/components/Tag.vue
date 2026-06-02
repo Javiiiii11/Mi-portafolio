@@ -141,6 +141,31 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
       background-color: #95630e;
       color: white;
     }
+
+    &-godot {
+      background-color: #478cbf;
+      color: white;
+    }
+
+    &-gdscript {
+      background-color: #3a8e9f;
+      color: white;
+    }
+
+    &-2d {
+      background-color: #8B7355;
+      color: white;
+    }
+
+    &-multiplayer {
+      background-color: #6B8E23;
+      color: white;
+    }
+
+    &-local-save {
+      background-color: #8B4513;
+      color: white;
+    }
   }
 }
 </style>

@@ -1,4 +1,4 @@
-import thumbnailCubeWar from "../../../assets/thumbnails/cubewar.webp";
+import thumbnailTempestDuo from "../../../assets/thumbnails/tempestduo.png";
 import thumbnailQuibbo from "../../../assets/thumbnails/quibbo.webp";
 import thumbnailPokedex from "../../../assets/thumbnails/pokedex.webp";
 import thumbnailSharkie from "../../../assets/thumbnails/sharkie.webp";
@@ -14,10 +14,10 @@ export default [
     description: "App social de entrenamiento",
   },
   {
-    title: "CubeWar",
-    slug: "cubewar",
-    thumbnail: thumbnailCubeWar,
-    description: "Juego multijugador de estrategia",
+    title: "Tempest Duo",
+    slug: "tempestduo",
+    thumbnail: thumbnailTempestDuo,
+    description: "Juego 2D multijugador en Godot",
   },
   {
     title: "Quibbo",
