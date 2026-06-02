@@ -7,7 +7,6 @@ import type { Locale } from "../types";
 
 export const useTranslations = () => {
   const normalizeLocale = (value: string | null | undefined): Locale | null => {
-    if (value === "de") return "es";
     if (value === "en" || value === "es") return value;
     return null;
   };
