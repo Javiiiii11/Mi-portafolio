@@ -1,34 +1,73 @@
-import streakon0 from "../../../assets/images/projects/streakon/streakon-0.webp";
-import streakon1 from "../../../assets/images/projects/streakon/streakon-1.webp";
-import streakon2 from "../../../assets/images/projects/streakon/streakon-2.webp";
-import streakon3 from "../../../assets/images/projects/streakon/streakon-3.webp";
+import streakon0 from "../../../assets/images/projects/gymrace/gymrace-0.png";
+import streakon1 from "../../../assets/images/projects/gymrace/gymrace-1.png";
+import streakon2 from "../../../assets/images/projects/gymrace/gymrace-2.png";
+import streakon3 from "../../../assets/images/projects/gymrace/gymrace-3.png";
 
 import type { ProjectContent } from "../../types";
 
 export default {
-  title: "StreakOn",
+  title: "GymRace",
   theme: "dark",
-  tags: ["next", "node", "postgresql", "redis"],
+  tags: ["kotlin", "jetpack-compose", "flask", "python", "html", "css", "javascript", "firebase"],
+  tagGroups: [
+    {
+      title: "Tecnologías",
+      tags: ["kotlin", "jetpack-compose", "flask", "python", "html", "css", "javascript", "firebase"],
+    },
+    {
+      title: "IDE",
+      tags: ["android-studio", "pycharm", "vscode"],
+    },
+    {
+      title: "Disponible para",
+      tags: ["android", "windows"],
+    },
+  ],
   videoBorder: false,
-  live: "https://www.streakon.app",
+  live: "https://github.com/Javiiiii11/TFG.Gymrace/tree/main",
+  liveLabel: "Ver en GitHub",
   description:
-    "StreakOn ayuda a pequeños grupos a mantener hábitos diarios mediante rachas compartidas y check-ins sencillos.<br/><br/>La app se diseñó priorizando interacciones sin fricción, uso móvil y funciones sociales ligeras, con Next.js, Node.js, PostgreSQL y Redis.",
+    "GymRace es un proyecto de TFG centrado en el seguimiento y progreso de entrenamientos de gimnasio.<br/><br/>La app plantea una experiencia móvil moderna, visual e intuitiva, donde los usuarios pueden crear rutinas, compartirlas, competir con amigos, seguir planes de dieta y mantener la motivación mediante gamificación e interacción social.",
   components: [
     {
       type: "media",
-      props: { type: "image", src: streakon0, alt: "Rachas individuales y de grupo", caption: "Rachas individuales y de grupo" },
+      props: {
+        type: "image",
+        src: streakon0,
+        alt: "Diseño intuitivo y agradable",
+        caption: "Diseño intuitivo y agradable",
+        ratio: "6 / 5",
+      },
     },
     {
       type: "media",
-      props: { type: "image", src: streakon1, alt: "Progreso de rachas", caption: "Progreso de rachas" },
+      props: {
+        type: "image",
+        src: streakon1,
+        alt: "Gran variedad de dietas",
+        caption: "Gran variedad de dietas",
+        ratio: "6 / 5",
+      },
     },
     {
       type: "media",
-      props: { type: "image", src: streakon2, alt: "Animar a amigos", caption: "Animar a amigos" },
+      props: {
+        type: "image",
+        src: streakon2,
+        alt: "+500 ejercicios detallados y explicados",
+        caption: "+500 ejercicios detallados y explicados",
+        ratio: "6 / 5",
+      },
     },
     {
       type: "media",
-      props: { type: "image", src: streakon3, alt: "Flujo de invitación", caption: "Flujo de invitación" },
+      props: {
+        type: "image",
+        src: streakon3,
+        alt: "Sistema de desafíos para fomentar la motivación",
+        caption: "Sistema de desafíos para fomentar la motivación",
+        ratio: "6 / 5",
+      },
     },
   ],
 } as const satisfies ProjectContent;

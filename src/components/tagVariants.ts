@@ -7,6 +7,16 @@ export type TagVariant =
   | "html"
   | "css"
   | "javascript"
+  | "kotlin"
+  | "jetpack-compose"
+  | "flask"
+  | "python"
+  | "firebase"
+  | "android-studio"
+  | "pycharm"
+  | "vscode"
+  | "android"
+  | "windows"
   | "node"
   | "next"
   | "kubernetes"
@@ -23,6 +33,16 @@ export const tagLabels = {
   html: "HTML",
   css: "CSS",
   javascript: "JavaScript",
+  kotlin: "Kotlin",
+  "jetpack-compose": "Jetpack Compose",
+  flask: "Flask",
+  python: "Python",
+  firebase: "Firebase",
+  "android-studio": "Android Studio",
+  pycharm: "PyCharm",
+  vscode: "VS Code",
+  android: "Android",
+  windows: "Windows",
   node: "Node.js",
   next: "Next.js",
   kubernetes: "Kubernetes",

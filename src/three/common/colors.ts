@@ -4,7 +4,8 @@ import { theme } from "../../composables/useTheme";
 export const colors = {
   beigeDark: new Color("rgb(233, 222, 208)"),
   beigeLight: new Color("#f5efe6"),
-  darkBg: new Color("#0f0f0f"),
+  darkBg: new Color("#1a1f28"),
+  darkContactBg: new Color("#1a1f28"),
   darkShadow: new Color("rgb(60, 60, 60)"),
 };
 
@@ -18,7 +19,7 @@ export const getBackgroundColor = (): Color => {
 export const getContactBackgroundColor = (): Color => {
   if (!theme || !theme.value) return colors.beigeDark;
   // Un gris oscuro que permite ver el personaje
-  return theme.value === "dark" ? new Color("#1a1f28") : colors.beigeDark;
+  return theme.value === "dark" ? colors.darkContactBg : colors.beigeDark;
 };
 
 // Función para obtener el color de sombra en contacto según el tema

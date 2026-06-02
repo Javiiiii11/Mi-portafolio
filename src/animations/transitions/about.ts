@@ -212,7 +212,7 @@ const setupSectionsAnimation = ({
     tl.to(completed, { value: true, duration: 0 }, 1);
 
     if (isLandscape) {
-      // Equal spacing between three animations: 0, 0.275, 0.55
+      // Equal spacing between animations
       const DETAILS_DELAY = 0;
       const DESCRIPTION_DELAY = 0.4;
       const SERVICES_DELAY = 0.8;

@@ -13,6 +13,7 @@ export interface Props {
   src: string;
   alt?: string;
   caption?: string;
+  ratio?: string;
   index: number;
 }
 
@@ -53,7 +54,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div :class="wrapperClasses" ref="wrapperRef">
+  <div :class="wrapperClasses" :style="{ '--project-media-aspect-ratio': props.ratio }" ref="wrapperRef">
     <div class="project-media-content" ref="mediaContentRef">
       <img
         v-if="props.type === 'image'"
@@ -94,7 +95,7 @@ onMounted(async () => {
   max-width: 900px;
   justify-self: center;
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: var(--project-media-aspect-ratio, 16 / 9);
 
   @include mixins.mq("md") {
     grid-column: 2 / 12;

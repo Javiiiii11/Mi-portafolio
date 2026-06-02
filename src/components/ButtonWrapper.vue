@@ -50,9 +50,9 @@ const classes = computed(() => [
 
     @include mixins.hover {
       &:hover {
-        background-color: var(--color-card-bg-hover, var(--color-hover));
-        color: var(--color-accent-text-400, var(--color-white-400));
-        --icon-color: var(--color-accent-text-400, var(--color-white-400));
+        background-color: var(--color-hover);
+        color: var(--color-hover-text);
+        --icon-color: var(--color-hover-text);
       }
     }
   }
@@ -64,9 +64,9 @@ const classes = computed(() => [
 
     @include mixins.hover {
       &:hover {
-        background-color: var(--color-card-bg-hover, var(--color-hover));
-        color: var(--color-text-400);
-        --icon-color: var(--color-text-400);
+        background-color: var(--color-accent-400);
+        color: var(--color-white-400);
+        --icon-color: var(--color-white-400);
       }
     }
   }
@@ -78,9 +78,9 @@ const classes = computed(() => [
 
     @include mixins.hover {
       &:hover {
-        background-color: var(--color-card-bg-hover, var(--color-text-400));
-        color: var(--color-text-400);
-        --icon-color: var(--color-text-400);
+        background-color: var(--color-hover);
+        color: var(--color-hover-text);
+        --icon-color: var(--color-hover-text);
       }
     }
   }
@@ -92,7 +92,9 @@ const classes = computed(() => [
 
     @include mixins.hover {
       &:hover {
-        background-color: var(--color-card-bg-hover, var(--color-gray-500));
+        background-color: var(--color-hover);
+        color: var(--color-hover-text);
+        --icon-color: var(--color-hover-text);
       }
     }
   }
@@ -104,10 +106,10 @@ const classes = computed(() => [
 
     @include mixins.hover {
       &:hover {
-        background-color: var(--color-card-bg-hover, var(--color-hover));
-        color: var(--color-text-400);
-        --icon-color: var(--color-text-400);
-        border-color: var(--color-card-border, var(--color-hover));
+        background-color: var(--color-hover);
+        color: var(--color-hover-text);
+        --icon-color: var(--color-hover-text);
+        border-color: var(--color-hover);
       }
     }
   }

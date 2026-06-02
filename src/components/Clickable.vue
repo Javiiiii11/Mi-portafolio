@@ -35,10 +35,11 @@ const props = defineProps<{
 
   @include mixins.hover {
     &:hover {
-      color: var(--color-white-400);
+      color: var(--color-hover-text);
 
       &::after {
         opacity: 1;
+        background-color: var(--color-hover);
       }
     }
   }

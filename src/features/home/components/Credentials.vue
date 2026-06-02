@@ -644,7 +644,7 @@ onBeforeUnmount(() => {
     &-image-wrapper {
       border-radius: var(--radius-md);
       overflow: visible;
-      background: var(--color-card-bg);
+      background: var(--color-background-400);
       min-height: 350px;
       display: flex;
       align-items: center;

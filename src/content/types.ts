@@ -9,9 +9,14 @@ export interface ProjectContent {
   title: string;
   theme: "light" | "dark";
   tags: TagVariant[];
+  tagGroups?: {
+    title: string;
+    tags: TagVariant[];
+  }[];
   description?: string;
   videoBorder?: boolean;
   live?: string;
+  liveLabel?: string;
   source?: string;
   components?: ProjectComponent[];
 }

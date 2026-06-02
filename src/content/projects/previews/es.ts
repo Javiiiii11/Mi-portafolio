@@ -2,16 +2,16 @@ import thumbnailCubeWar from "../../../assets/thumbnails/cubewar.webp";
 import thumbnailQuibbo from "../../../assets/thumbnails/quibbo.webp";
 import thumbnailPokedex from "../../../assets/thumbnails/pokedex.webp";
 import thumbnailSharkie from "../../../assets/thumbnails/sharkie.webp";
-import thumbnailStreakon from "../../../assets/thumbnails/streakon.webp";
+import thumbnailStreakon from "../../../assets/thumbnails/gymrace.png";
 
 import type { ProjectPreview } from "../../types";
 
 export default [
   {
-    title: "StreakOn",
+    title: "GymRace",
     slug: "streakon",
     thumbnail: thumbnailStreakon,
-    description: "App de hábitos diarios",
+    description: "App social de entrenamiento",
   },
   {
     title: "CubeWar",

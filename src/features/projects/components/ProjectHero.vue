@@ -28,7 +28,15 @@ watch(projectId, () => {
           {{ content.title }}
         </h1>
       </div>
-      <div class="project-hero-tags">
+      <div v-if="content.tagGroups" class="project-hero-tag-groups">
+        <div v-for="group in content.tagGroups" :key="group.title" class="project-hero-tag-group">
+          <p class="project-hero-tag-group-title">{{ group.title }}</p>
+          <div class="project-hero-tags">
+            <Tag v-for="tag in group.tags" :key="`${group.title}-${tag}`" :variant="tag" />
+          </div>
+        </div>
+      </div>
+      <div v-else class="project-hero-tags">
         <Tag v-for="tag in content.tags" :key="tag" :variant="tag" />
       </div>
     </div>
@@ -36,7 +44,7 @@ watch(projectId, () => {
     <div class="project-hero-buttons">
       <Link v-if="content.live" :href="content.live" external class="project-hero-button" data-cursor="arrow-external">
         <Button renderAs="div" variant="accent" class="children-unclickable" data-hoversound="hover">{{
-          t("live-view")
+          content.liveLabel ?? t("live-view")
         }}</Button>
       </Link>
       <Link
@@ -113,6 +121,27 @@ watch(projectId, () => {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-sm);
+  }
+
+  &-tag-groups {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  &-tag-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  &-tag-group-title {
+    color: var(--color-text-300);
+    font-family: "ProFontWindows";
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   &-title {

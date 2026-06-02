@@ -115,24 +115,24 @@ onMounted(loadPreviews);
     }
   }
 
-  &-notch {
-    &-start {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translateY(-100%);
-      color: var(--color-beige-400);
-      --icon-color: var(--color-beige-400);
-    }
+    &-notch {
+      &-start {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        color: var(--color-beige-400);
+        --icon-color: var(--color-beige-400);
+      }
 
-    &-end {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      color: var(--color-beige-600);
-      --icon-color: var(--color-beige-600);
+      &-end {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: var(--color-beige-600);
+        --icon-color: var(--color-beige-600);
+      }
     }
-  }
 
   &-cards {
     max-width: 100%;

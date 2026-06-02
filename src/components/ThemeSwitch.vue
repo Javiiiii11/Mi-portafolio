@@ -32,7 +32,8 @@ const handleClick = () => {
 }
 
 .theme-btn:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--color-hover);
+  color: var(--color-hover-text);
   transform: scale(1.1);
 }
 </style>

@@ -1,8 +1,21 @@
-import { ref, watch, onMounted } from "vue";
+import { ref, watch } from "vue";
 
 export type Theme = "light" | "dark";
 
-export const theme = ref<Theme>("dark");
+const THEME_STORAGE_KEY = "portfolio-theme";
+
+const isTheme = (value: string | null): value is Theme => value === "light" || value === "dark";
+
+const getInitialTheme = (): Theme => {
+  if (typeof window === "undefined") return "light";
+
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+  return isTheme(savedTheme) ? savedTheme : "light";
+};
+
+export const theme = ref<Theme>(getInitialTheme());
+
+let isThemeWatcherReady = false;
 
 export const useTheme = () => {
   const toggleTheme = () => {
@@ -13,27 +26,18 @@ export const useTheme = () => {
     theme.value = newTheme;
   };
 
-  // Aplicar tema al DOM
-  watch(
-    theme,
-    (newTheme) => {
-      document.documentElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("portfolio-theme", newTheme);
-    },
-    { immediate: true }
-  );
+  if (!isThemeWatcherReady && typeof document !== "undefined") {
+    isThemeWatcherReady = true;
 
-  // Cargar tema guardado al montar
-  onMounted(() => {
-    const savedTheme = localStorage.getItem("portfolio-theme") as Theme | null;
-    if (savedTheme) {
-      theme.value = savedTheme;
-    } else {
-      // Detectar preferencia del sistema
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      theme.value = prefersDark ? "dark" : "light";
-    }
-  });
+    watch(
+      theme,
+      (newTheme) => {
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem(THEME_STORAGE_KEY, newTheme);
+      },
+      { immediate: true },
+    );
+  }
 
   return {
     theme,

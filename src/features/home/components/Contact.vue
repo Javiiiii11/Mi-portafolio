@@ -139,6 +139,13 @@ onUnmounted(() => {
     }
 
     &-links {
+      --contact-chip-bg: rgba(255, 255, 255, 0.58);
+      --contact-chip-border: rgba(45, 42, 36, 0.16);
+      --contact-chip-color: var(--color-text-400);
+      --contact-chip-hover-bg: var(--color-black-400);
+      --contact-chip-hover-border: var(--color-black-400);
+      --contact-chip-hover-color: var(--color-white-400);
+
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-xs);
@@ -149,21 +156,46 @@ onUnmounted(() => {
         justify-content: center;
         border-radius: 999px;
         padding: 8px 12px;
-        background: var(--color-card-bg, rgba(255, 255, 255, 0.42));
-        border: 1px solid var(--color-card-border, rgba(38, 60, 112, 0.12));
+        background: var(--contact-chip-bg);
+        border: 1px solid var(--contact-chip-border);
+        color: var(--contact-chip-color);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) inset;
         font-size: var(--font-size-sm);
         font-weight: 700;
-        transition: all 0.2s ease;
+        transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease,
+          box-shadow 0.2s ease,
+          color 0.2s ease,
+          transform 0.2s ease;
 
         @include mixins.hover {
           &:hover {
-            background-color: var(--color-card-bg-hover, var(--color-hover));
-            color: var(--color-white-400);
-            border-color: var(--color-card-border, var(--color-hover));
+            background-color: var(--contact-chip-hover-bg);
+            border-color: var(--contact-chip-hover-border);
+            color: var(--contact-chip-hover-color);
+            box-shadow: none;
+            transform: translateY(-1px);
           }
+        }
+
+        &:focus-visible {
+          outline: 2px solid var(--color-cyan-400);
+          outline-offset: 3px;
         }
       }
     }
+  }
+}
+
+:global([data-theme="dark"]) {
+  .contact-profile-links {
+    --contact-chip-bg: rgba(255, 255, 255, 0.08);
+    --contact-chip-border: rgba(80, 220, 255, 0.28);
+    --contact-chip-color: var(--color-text-400);
+    --contact-chip-hover-bg: var(--color-black-400);
+    --contact-chip-hover-border: var(--color-black-400);
+    --contact-chip-hover-color: #000000;
   }
 }
 </style>
