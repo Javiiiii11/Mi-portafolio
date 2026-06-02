@@ -19,6 +19,7 @@ export interface ProjectContent {
   liveLabel?: string;
   source?: string;
   components?: ProjectComponent[];
+  logo?: string;
 }
 
 export interface SkillContent {

@@ -23,6 +23,7 @@ watch(projectId, () => {
 <template>
   <div class="project-hero grid">
     <div class="project-hero-top">
+      <img v-if="content.logo" :src="content.logo" class="project-hero-logo" alt="Logo" />
       <div class="project-hero-title-wrapper">
         <h1 class="project-hero-title" :key="animationKey">
           {{ content.title }}
@@ -188,6 +189,17 @@ watch(projectId, () => {
     @include mixins.mq("xl") {
       grid-row: 1;
       grid-column: 7 / 11;
+    }
+  }
+
+  &-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+
+    @include mixins.mq("md") {
+      width: 100px;
+      height: 100px;
     }
   }
 

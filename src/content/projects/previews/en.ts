@@ -10,7 +10,7 @@ import type { ProjectPreview } from "../../types";
 export default [
   {
     title: "GymRace",
-    slug: "streakon",
+    slug: "gymrace",
     thumbnail: thumbnailStreakon,
     description: "Social fitness training app",
   },
