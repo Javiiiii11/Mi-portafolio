@@ -78,9 +78,9 @@ const classes = computed(() => [
 
     @include mixins.hover {
       &:hover {
-        background-color: var(--color-hover);
-        color: var(--color-hover-text);
-        --icon-color: var(--color-hover-text);
+        background-color: var(--color-accent-400);
+        color: var(--color-white-400);
+        --icon-color: var(--color-white-400);
       }
     }
   }

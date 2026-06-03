@@ -142,8 +142,8 @@ onUnmounted(() => {
       --contact-chip-bg: rgba(255, 255, 255, 0.58);
       --contact-chip-border: rgba(45, 42, 36, 0.16);
       --contact-chip-color: var(--color-text-400);
-      --contact-chip-hover-bg: var(--color-black-400);
-      --contact-chip-hover-border: var(--color-black-400);
+      --contact-chip-hover-bg: var(--color-accent-400);
+      --contact-chip-hover-border: var(--color-accent-400);
       --contact-chip-hover-color: var(--color-white-400);
 
       display: flex;
@@ -193,9 +193,9 @@ onUnmounted(() => {
     --contact-chip-bg: rgba(255, 255, 255, 0.08);
     --contact-chip-border: rgba(80, 220, 255, 0.28);
     --contact-chip-color: var(--color-text-400);
-    --contact-chip-hover-bg: var(--color-black-400);
-    --contact-chip-hover-border: var(--color-black-400);
-    --contact-chip-hover-color: #000000;
+    --contact-chip-hover-bg: var(--color-accent-400);
+    --contact-chip-hover-border: var(--color-accent-400);
+    --contact-chip-hover-color: #ffffff;
   }
 }
 </style>

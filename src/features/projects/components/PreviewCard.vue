@@ -21,7 +21,7 @@ const props = defineProps<{
 }>();
 
 onMounted(async () => {
-  if (!wrapperRef.value || ScrollTrigger.isInViewport(wrapperRef.value)) {
+  if (!wrapperRef.value) {
     return;
   }
 
@@ -92,7 +92,7 @@ onUnmounted(() => {
     </div>
     <div class="preview-card-content">
       <div class="preview-card-copys">
-        <h3 class="preview-card-title">{{ t("start-a-new-project") }}</h3>
+        <h3 class="preview-card-title">{{ t('start-a-new-project') }}</h3>
       </div>
     </div>
   </Link>

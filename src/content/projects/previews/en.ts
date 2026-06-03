@@ -1,13 +1,19 @@
 import thumbnailTempestDuo from "../../../assets/thumbnails/tempestduo.png";
-import thumbnailQuibbo from "../../../assets/thumbnails/quibbo.webp";
+import thumbnailRestaurante from "../../../assets/thumbnails/restaurante-el-filete-del-rincon.png";
 //import thumbnailParticles from "../../../assets/thumbnails/particles.webp";
 import thumbnailPokedex from "../../../assets/thumbnails/pokedex.webp";
-import thumbnailSharkie from "../../../assets/thumbnails/sharkie.webp";
 import thumbnailStreakon from "../../../assets/thumbnails/gymrace.png";
+import thumbnailLogisticCloud from "../../../assets/thumbnails/logistic-cloud.png";
 
 import type { ProjectPreview } from "../../types";
 
 export default [
+  {
+    title: "Logistic Cloud",
+    slug: "logistic-cloud",
+    thumbnail: thumbnailLogisticCloud,
+    description: "Logistics management platform",
+  },
   {
     title: "GymRace",
     slug: "gymrace",
@@ -21,16 +27,10 @@ export default [
     description: "2D multiplayer game in Godot",
   },
   {
-    title: "Quibbo",
-    slug: "quibbo",
-    thumbnail: thumbnailQuibbo,
-    description: "Multiplayer gaming platform",
-  },
-  {
-    title: "Sharkie",
-    slug: "sharkie",
-    thumbnail: thumbnailSharkie,
-    description: "2D adventure game",
+    title: "El Filete del Rincón",
+    slug: "restaurante",
+    thumbnail: thumbnailRestaurante,
+    description: "Restaurant website",
   },
   /**  {
     title: "WebGL Particles",
