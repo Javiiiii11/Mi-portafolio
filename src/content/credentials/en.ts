@@ -1,14 +1,14 @@
 import googleHackingCertificate from "../../assets/images/certificates/Curso_de_Google_Hacking_II_Dorks_comandos_para_Hackear.png";
 import digitalSecurityCertificate from "../../assets/images/certificates/Seguridad_digital_para_tu_dia_a_dia.png";
 import pythonCertificate from "../../assets/images/certificates/python.png";
-import programmingCertificate from "../../assets/images/certificates/Cómo Programar Aplicaciones Desde cero .png";
-import wordpressCertificate from "../../assets/images/certificates/Curso paginas web en Wordpress.png";
-import canvaCertificate from "../../assets/images/certificates/Aprende Diseño en Canva.png";
+import programmingCertificate from "../../assets/images/certificates/Cómo_Programar_Aplicaciones_Desde_cero.png";
+import wordpressCertificate from "../../assets/images/certificates/Curso_paginas_web_en_Wordpress.png";
+import canvaCertificate from "../../assets/images/certificates/Aprende_Diseño_en_Canva.png";
 import aiProductivityCertificate from "../../assets/images/certificates/Inteligencia_Artificial_y_productividad.png";
 import excelCertificate from "../../assets/images/certificates/excel.png";
 import excelAdvancedCertificate from "../../assets/images/certificates/excel2.png";
 import powerBiCertificate from "../../assets/images/certificates/power_bi.png";
-import powerBiAdvancedCertificate from "../../assets/images/certificates/Power BI intermedio analisis y modelado de datos.png";
+import powerBiAdvancedCertificate from "../../assets/images/certificates/Power_BI_intermedio_analisis_y_modelado_de_datos.png";
 import geminiCertificate from "../../assets/images/certificates/Domina_la_IA_con_Gemini.png";
 
 import type { TitleEntry, CertificateEntry } from "./index";
