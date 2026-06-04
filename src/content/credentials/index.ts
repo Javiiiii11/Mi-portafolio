@@ -10,6 +10,7 @@ import excelAdvancedCertificate from "../../assets/images/certificates/excel2.pn
 import powerBiCertificate from "../../assets/images/certificates/power_bi.png";
 import powerBiAdvancedCertificate from "../../assets/images/certificates/Power BI intermedio analisis y modelado de datos.png";
 import geminiCertificate from "../../assets/images/certificates/Domina_la_IA_con_Gemini.png";
+import veo3Certificate from "../../assets/images/certificates/Domina_VEO3_Guia_Rapida_para_Principiantes.png";
 
 export type Profile = {
   name: string;
@@ -239,6 +240,14 @@ export const certificatesCompleted: CertificateEntry[] = [
     date: "26 may 2026",
     image: geminiCertificate,
     imageAlt: "Certificado de Domina la IA con Gemini",
+  },
+  {
+    title: "Domina VEO3: Guía Rápida para Principiantes",
+    issuer: "HoyAprendo",
+    category: "IA",
+    date: "2026",
+    image: veo3Certificate,
+    imageAlt: "Certificado de Domina VEO3: Guía Rápida para Principiantes",
   },
 ];
 
