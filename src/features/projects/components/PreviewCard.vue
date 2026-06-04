@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ButtonRound from "../../../components/ButtonRound.vue";
 import { t } from "../../../i18n/utils/translate";
 import { social } from "../../../content/social";
-import Plus from "../../../components/icons/Plus.vue";
+import Github from "../../../components/icons/Github.vue";
 
 import type { ProjectPreview } from "../../../content/types";
 
@@ -85,14 +85,15 @@ onUnmounted(() => {
     data-cursor="arrow-external"
     data-hoversound="hover"
     external
-    :href="social[0].url"
+    href="https://github.com/Javiiiii11"
   >
     <div class="preview-card-top preview-card-top-empty">
-      <Plus class="preview-card-top-empty-icon" />
+      <Github class="preview-card-top-empty-icon" />
     </div>
     <div class="preview-card-content">
       <div class="preview-card-copys">
         <h3 class="preview-card-title">{{ t('start-a-new-project') }}</h3>
+        <p class="preview-card-description">{{ t('start-a-new-project-desc') }}</p>
       </div>
     </div>
   </Link>
@@ -213,7 +214,7 @@ onUnmounted(() => {
       justify-content: center;
 
       &-icon {
-        width: var(--icon-size-lg);
+        width: calc(var(--icon-size-lg) * 1.4);
         color: var(--color-text-300);
         --icon-color: var(--color-text-300);
         --stroke-width: 4px;

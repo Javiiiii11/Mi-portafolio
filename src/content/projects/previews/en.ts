@@ -1,7 +1,7 @@
 import thumbnailTempestDuo from "../../../assets/thumbnails/tempestduo.png";
 import thumbnailRestaurante from "../../../assets/thumbnails/restaurante-el-filete-del-rincon.png";
 //import thumbnailParticles from "../../../assets/thumbnails/particles.webp";
-import thumbnailPokedex from "../../../assets/thumbnails/pokedex.webp";
+import thumbnailGenerador from "../../../assets/thumbnails/generador-contraseñas.png";
 import thumbnailStreakon from "../../../assets/thumbnails/gymrace.png";
 import thumbnailLogisticCloud from "../../../assets/thumbnails/logistic-cloud.png";
 
@@ -12,7 +12,7 @@ export default [
     title: "Logistic Cloud",
     slug: "logistic-cloud",
     thumbnail: thumbnailLogisticCloud,
-    description: "Logistics management platform",
+    description: "Cybersecurity lab",
   },
   {
     title: "GymRace",
@@ -39,9 +39,9 @@ export default [
     description: "Dynamic 3D particles",
   }, */
   {
-    title: "Pokédex",
-    slug: "pokedex",
-    thumbnail: thumbnailPokedex,
-    description: "Open-source learning project",
+    title: "Password Generator",
+    slug: "generador-contrasenas",
+    thumbnail: thumbnailGenerador,
+    description: "Secure password generator",
   },
 ] as const satisfies ProjectPreview[];

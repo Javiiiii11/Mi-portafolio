@@ -8,11 +8,23 @@ import type { ProjectContent } from "../../types";
 export default {
   title: "Logistic Cloud",
   theme: "dark",
-  tags: ["python"],
+  tags: ["virtualbox", "nmap", "gobuster", "ferroxbuster", "john-the-ripper", "msoffcrypto", "python", "ssh", "minio", "samba", "ftp", "wazuh", "suricata", "fim", "yara"],
   tagGroups: [
     {
-      title: "Cybersecurity",
-      tags: ["python"],
+      title: "Virtualization",
+      tags: ["virtualbox"],
+    },
+    {
+      title: "Reconnaissance & Exploitation",
+      tags: ["nmap", "gobuster", "ferroxbuster", "john-the-ripper", "msoffcrypto", "python"],
+    },
+    {
+      title: "Services & Access",
+      tags: ["ssh", "minio", "samba", "ftp"],
+    },
+    {
+      title: "SIEM & Monitoring",
+      tags: ["wazuh", "suricata", "fim", "yara"],
     },
   ],
   videoBorder: false,

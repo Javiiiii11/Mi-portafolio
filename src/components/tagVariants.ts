@@ -27,7 +27,21 @@ export type TagVariant =
   | "gdscript"
   | "2d"
   | "multiplayer"
-  | "local-save";
+  | "local-save"
+  | "nmap"
+  | "gobuster"
+  | "ferroxbuster"
+  | "john-the-ripper"
+  | "msoffcrypto"
+  | "ssh"
+  | "minio"
+  | "samba"
+  | "ftp"
+  | "wazuh"
+  | "suricata"
+  | "fim"
+  | "yara"
+  | "virtualbox";
 
 export const tagLabels = {
   three: "Three.js",
@@ -59,4 +73,18 @@ export const tagLabels = {
   "2d": "2D",
   multiplayer: "Multiplayer",
   "local-save": "Local Save",
+  nmap: "Nmap",
+  gobuster: "Gobuster",
+  ferroxbuster: "Ferroxbuster",
+  "john-the-ripper": "John the Ripper",
+  msoffcrypto: "msoffcrypto",
+  ssh: "SSH",
+  minio: "MinIO",
+  samba: "Samba",
+  ftp: "FTP",
+  wazuh: "Wazuh",
+  suricata: "Suricata",
+  fim: "FIM",
+  yara: "YARA",
+  virtualbox: "VirtualBox",
 } as const satisfies Record<TagVariant, string>;

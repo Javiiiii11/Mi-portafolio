@@ -166,6 +166,76 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
       background-color: #8B4513;
       color: white;
     }
+
+    &-nmap {
+      background-color: #4a90e2;
+      color: white;
+    }
+
+    &-gobuster {
+      background-color: #e67e22;
+      color: white;
+    }
+
+    &-ferroxbuster {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    &-john-the-ripper {
+      background-color: #8e44ad;
+      color: white;
+    }
+
+    &-msoffcrypto {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    &-ssh {
+      background-color: #1a5276;
+      color: white;
+    }
+
+    &-minio {
+      background-color: #c72e49;
+      color: white;
+    }
+
+    &-samba {
+      background-color: #27ae60;
+      color: white;
+    }
+
+    &-ftp {
+      background-color: #d35400;
+      color: white;
+    }
+
+    &-wazuh {
+      background-color: #005b96;
+      color: white;
+    }
+
+    &-suricata {
+      background-color: #3498db;
+      color: white;
+    }
+
+    &-fim {
+      background-color: #e91e63;
+      color: white;
+    }
+
+    &-yara {
+      background-color: #9c27b0;
+      color: white;
+    }
+
+    &-virtualbox {
+      background-color: #187498;
+      color: white;
+    }
   }
 }
 </style>
