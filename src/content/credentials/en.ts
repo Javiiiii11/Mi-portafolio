@@ -10,6 +10,9 @@ import excelAdvancedCertificate from "../../assets/images/certificates/excel2.pn
 import powerBiCertificate from "../../assets/images/certificates/power_bi.png";
 import powerBiAdvancedCertificate from "../../assets/images/certificates/Power_BI_intermedio_analisis_y_modelado_de_datos.png";
 import geminiCertificate from "../../assets/images/certificates/Domina_la_IA_con_Gemini.png";
+import veo3Certificate from "../../assets/images/certificates/Domina_VEO3_Guia_Rapida_para_Principiantes.png";
+import cursorPythonCertificate from "../../assets/images/certificates/Cursor_con_Python_desarrollo_inteligente_con_IA.png";
+import formula1Certificate from "../../assets/images/certificates/lidera_a_toda_velocidad_lecciones_de_la_formula_1.png";
 
 import type { TitleEntry, CertificateEntry } from "./index";
 
@@ -200,15 +203,34 @@ export const certificatesCompleted: CertificateEntry[] = [
     image: geminiCertificate,
     imageAlt: "Master AI with Gemini Certificate",
   },
-];
-
-export const certificatesPending: CertificateEntry[] = [
+  {
+    title: "Master VEO3: Quick Guide for Beginners",
+    issuer: "Google / Santander Open Academy",
+    category: "AI",
+    date: "2026",
+    image: veo3Certificate,
+    imageAlt: "Master VEO3: Quick Guide for Beginners Certificate",
+  },
   {
     title: "Cursor with Python: Intelligent Development with AI",
     issuer: "Google / Santander Open Academy",
     category: "Development",
     date: "2026",
+    image: cursorPythonCertificate,
+    imageAlt: "Cursor with Python: Intelligent Development with AI Certificate",
   },
+  {
+    title: "Lead at Full Speed: Lessons from Formula 1®",
+    issuer: "Google / Santander Open Academy",
+    category: "Other",
+    date: "2026",
+    image: formula1Certificate,
+    imageAlt: "Lead at Full Speed: Lessons from Formula 1 Certificate",
+  },
+];
+
+export const certificatesPending: CertificateEntry[] = [
+
   {
     title: "Copilots without Rating",
     issuer: "Google / Santander Open Academy",
@@ -277,12 +299,6 @@ export const certificatesPending: CertificateEntry[] = [
   },
   {
     title: "Marketing Automation",
-    issuer: "Google / Santander Open Academy",
-    category: "Other",
-    date: "2026",
-  },
-  {
-    title: "Lead at Full Speed: Lessons from Formula 1®",
     issuer: "Google / Santander Open Academy",
     category: "Other",
     date: "2026",

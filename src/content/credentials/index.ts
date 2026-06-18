@@ -11,6 +11,8 @@ import powerBiCertificate from "../../assets/images/certificates/power_bi.png";
 import powerBiAdvancedCertificate from "../../assets/images/certificates/Power_BI_intermedio_analisis_y_modelado_de_datos.png";
 import geminiCertificate from "../../assets/images/certificates/Domina_la_IA_con_Gemini.png";
 import veo3Certificate from "../../assets/images/certificates/Domina_VEO3_Guia_Rapida_para_Principiantes.png";
+import cursorPythonCertificate from "../../assets/images/certificates/Cursor_con_Python_desarrollo_inteligente_con_IA.png";
+import formula1Certificate from "../../assets/images/certificates/lidera_a_toda_velocidad_lecciones_de_la_formula_1.png";
 
 export type Profile = {
   name: string;
@@ -249,15 +251,25 @@ export const certificatesCompleted: CertificateEntry[] = [
     image: veo3Certificate,
     imageAlt: "Certificado de Domina VEO3: Guía Rápida para Principiantes",
   },
+    {
+    title: "Cursor con Python: Desarrollo Inteligente con IA",
+    issuer: "Google / Santander Open Academy",
+    category: "IA",
+    date: "2026",
+    image: cursorPythonCertificate,
+    imageAlt: "Certificado de Cursor con Python: Desarrollo Inteligente con IA",
+  },
+  {
+    title: "Lidera a Toda Velocidad: Lecciones de la Fórmula 1®",
+    issuer: "Google / Santander Open Academy",
+    category: "Otros",
+    date: "2026",
+    image: formula1Certificate,
+    imageAlt: "Certificado de Lidera a Toda Velocidad: Lecciones de la Formula 1",
+  },
 ];
 
 export const certificatesPending: CertificateEntry[] = [
-  {
-    title: "Cursor con Python: Desarrollo Inteligente con IA",
-    issuer: "Google / Santander Open Academy",
-    category: "Desarrollo",
-    date: "2026",
-  },
   {
     title: "Copilots sin calificación",
     issuer: "Google / Santander Open Academy",
@@ -278,13 +290,13 @@ export const certificatesPending: CertificateEntry[] = [
   },
   {
     title: "Business English: Listening and Communication Skills - Part 1",
-    issuer: "Santander",
+    issuer: "Google / Santander Open Academy",
     category: "Idiomas",
     date: "2026",
   },
   {
     title: "Inglés para Entrevistas y Networking",
-    issuer: "Santander",
+    issuer: "Google / Santander Open Academy",
     category: "Idiomas",
     date: "2026",
   },
@@ -326,12 +338,6 @@ export const certificatesPending: CertificateEntry[] = [
   },
   {
     title: "Marketing Automation",
-    issuer: "Google / Santander Open Academy",
-    category: "Otros",
-    date: "2026",
-  },
-  {
-    title: "Lidera a Toda Velocidad: Lecciones de la Fórmula 1®",
     issuer: "Google / Santander Open Academy",
     category: "Otros",
     date: "2026",
