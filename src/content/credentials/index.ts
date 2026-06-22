@@ -13,6 +13,7 @@ import geminiCertificate from "../../assets/images/certificates/Domina_la_IA_con
 import veo3Certificate from "../../assets/images/certificates/Domina_VEO3_Guia_Rapida_para_Principiantes.png";
 import cursorPythonCertificate from "../../assets/images/certificates/Cursor_con_Python_desarrollo_inteligente_con_IA.png";
 import formula1Certificate from "../../assets/images/certificates/lidera_a_toda_velocidad_lecciones_de_la_formula_1.png";
+import chatgptFundamentalsCertificate from "../../assets/images/certificates/fundamentos_de_chatgpt.png";
 
 export type Profile = {
   name: string;
@@ -267,17 +268,19 @@ export const certificatesCompleted: CertificateEntry[] = [
     image: formula1Certificate,
     imageAlt: "Certificado de Lidera a Toda Velocidad: Lecciones de la Formula 1",
   },
+  {
+    title: "Fundamentos de ChatGPT",
+    issuer: "Google / Santander Open Academy",
+    category: "IA",
+    date: "2026",
+    image: chatgptFundamentalsCertificate,
+    imageAlt: "Certificado de Fundamentos de ChatGPT",
+  },
 ];
 
 export const certificatesPending: CertificateEntry[] = [
   {
     title: "Copilots sin calificación",
-    issuer: "Google / Santander Open Academy",
-    category: "IA",
-    date: "2026",
-  },
-  {
-    title: "Fundamentos de ChatGPT",
     issuer: "Google / Santander Open Academy",
     category: "IA",
     date: "2026",
