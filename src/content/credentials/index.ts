@@ -14,6 +14,7 @@ import veo3Certificate from "../../assets/images/certificates/Domina_VEO3_Guia_R
 import cursorPythonCertificate from "../../assets/images/certificates/Cursor_con_Python_desarrollo_inteligente_con_IA.png";
 import formula1Certificate from "../../assets/images/certificates/lidera_a_toda_velocidad_lecciones_de_la_formula_1.png";
 import chatgptFundamentalsCertificate from "../../assets/images/certificates/fundamentos_de_chatgpt.png";
+import cyberFundamentalsCertificate from "../../assets/images/certificates/Fundamentos_de_ciberseguridad.png";
 
 export type Profile = {
   name: string;
@@ -163,6 +164,14 @@ export const certificatesCompleted: CertificateEntry[] = [
     date: "2026",
     image: digitalSecurityCertificate,
     imageAlt: "Certificado de Seguridad digital para tu día a día",
+  },
+  {
+    title: "Fundamentos de ciberseguridad",
+    issuer: "Santander Open Academy · Contenido desarrollado por IBM",
+    category: "Ciberseguridad",
+    date: "2026",
+    image: cyberFundamentalsCertificate,
+    imageAlt: "Certificado de Fundamentos de ciberseguridad",
   },
   {
     title: "Python",
