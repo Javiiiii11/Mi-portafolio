@@ -152,7 +152,7 @@ const setupOutAnimation = (about: HTMLElement) => {
 };
 
 const setupScenesAnimation = (about: HTMLElement) => {
-  scenesMm = createMatchMedia((_context) => {
+  scenesMm = createMatchMedia((_context, { isLandscape }) => {
     const tl = gsap.timeline({
       duration: 1,
       scrollTrigger: {
@@ -171,7 +171,9 @@ const setupScenesAnimation = (about: HTMLElement) => {
     const duration = (1 - delay * 2) * multiplier;
 
     const { waypointsRotation } = avatar;
-    tl.to(waypointsRotation, { x: 0, y: -Math.PI, z: 0, duration: duration, ease: "power1.inOut" }, delay);
+    if (isLandscape) {
+      tl.to(waypointsRotation, { x: 0, y: -Math.PI, z: 0, duration: duration, ease: "power1.inOut" }, delay);
+    }
 
     tl.to(sceneWeightsInOut["about-2"], { in: 1, duration: duration, ease: "power1.inOut" }, delay);
     tl.to(sceneWeightsInOut["about-1"], { out: 1, duration: duration, ease: "power1.inOut" }, delay);
@@ -245,7 +247,7 @@ const setupSectionsAnimation = ({
     } else {
       // Mobile: only description and services (details hidden on portrait)
       const DESCRIPTION_DELAY = 0;
-      const SERVICES_DELAY = 0.6;
+      const SERVICES_DELAY = 0.72;
 
       // Details animation disabled - BoxDetails is hidden on portrait
 
@@ -256,7 +258,7 @@ const setupSectionsAnimation = ({
         { opacity: 1, y: "0vh", duration: 0.15, ease: "power1.out" },
         DESCRIPTION_DELAY,
       );
-      tl.to(contentDescription, { opacity: 0, y: "-10vh", duration: 0.15, ease: "power1.out" }, SERVICES_DELAY - 0.075);
+      tl.to(contentDescription, { opacity: 0, y: "-10vh", duration: 0.15, ease: "power1.out" }, SERVICES_DELAY - 0.1);
       tl.add(() => {
         tlDescription?.play();
       }, DESCRIPTION_DELAY);

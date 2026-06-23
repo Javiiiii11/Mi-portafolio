@@ -50,33 +50,59 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 .contact {
+  --contact-scrim-top: rgba(233, 222, 208, 0.94);
+  --contact-scrim-mid: rgba(233, 222, 208, 0.78);
+  --contact-scrim-bottom: rgba(233, 222, 208, 0);
+
   width: 100%;
   max-width: calc(var(--svw) * 100);
   overflow: hidden;
   min-height: calc(var(--lvh) * 100);
   padding: var(--space-outer);
-  padding-top: var(--space-lg);
+  padding-top: clamp(7.5rem, 18vh, 9.5rem);
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      var(--contact-scrim-top) 0%,
+      var(--contact-scrim-mid) 38%,
+      var(--contact-scrim-bottom) 72%
+    );
+  }
 
   @include mixins.mq("md") {
     padding-top: var(--space-xxl);
+
+    &::before {
+      display: none;
+    }
   }
 
   &-content {
     position: relative;
-    padding-top: var(--space-md);
     grid-column: 1 / 13;
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
+    width: 100%;
+    max-width: min(21rem, calc(100vw - var(--space-outer) * 2));
+    z-index: 1;
 
     @include mixins.mq("sm") {
       grid-column: 1 / 8;
+      max-width: 23rem;
     }
 
     @include mixins.mq("md") {
       gap: var(--space-xl);
       grid-column: 1 / 6;
-      padding-top: var(--space-lg);
+      max-width: none;
     }
 
     @include mixins.mq("lg") {
@@ -87,7 +113,8 @@ onUnmounted(() => {
   &-title {
     font-weight: 900;
     letter-spacing: 0.02em;
-    font-size: var(--font-size-title-md);
+    font-size: clamp(2.75rem, 11vw, var(--font-size-title-md));
+    line-height: 1.04;
 
     @include mixins.mq("sm") {
       font-size: var(--font-size-title-lg);
@@ -102,14 +129,13 @@ onUnmounted(() => {
     display: flex;
     align-items: center;
     gap: var(--space-lg);
-    margin-bottom: var(--space-md);
   }
 
   &-profile {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
-    padding: var(--space-md) 0;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
     border-top: 1px solid rgba(97, 218, 251, 0.22);
     border-bottom: 1px solid rgba(97, 218, 251, 0.22);
 
@@ -127,7 +153,7 @@ onUnmounted(() => {
     }
 
     &-name {
-      font-size: var(--font-size-title-sm);
+      font-size: clamp(var(--font-size-title-xs), 6vw, var(--font-size-title-sm));
       font-weight: 900;
       line-height: 1.05;
     }
@@ -136,6 +162,11 @@ onUnmounted(() => {
       color: var(--color-text-400);
       line-height: var(--line-height-copy);
       max-width: 44ch;
+      font-size: var(--font-size-sm);
+
+      @include mixins.mq("sm") {
+        font-size: var(--font-size-md);
+      }
     }
 
     &-links {
@@ -154,8 +185,9 @@ onUnmounted(() => {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        min-height: 38px;
         border-radius: 999px;
-        padding: 8px 12px;
+        padding: 7px 12px;
         background: var(--contact-chip-bg);
         border: 1px solid var(--contact-chip-border);
         color: var(--contact-chip-color);
@@ -188,14 +220,21 @@ onUnmounted(() => {
   }
 }
 
-:global([data-theme="dark"]) {
-  .contact-profile-links {
-    --contact-chip-bg: rgba(255, 255, 255, 0.08);
-    --contact-chip-border: rgba(80, 220, 255, 0.28);
-    --contact-chip-color: var(--color-text-400);
-    --contact-chip-hover-bg: var(--color-accent-400);
-    --contact-chip-hover-border: var(--color-accent-400);
-    --contact-chip-hover-color: #ffffff;
-  }
+:global(html[data-theme="dark"]) .contact {
+  --contact-scrim-top: rgba(18, 22, 29, 0.98);
+  --contact-scrim-mid: rgba(18, 22, 29, 0.86);
+  --contact-scrim-bottom: rgba(18, 22, 29, 0);
+
+  background-color: #12161d;
+  color: var(--color-text-400);
+}
+
+:global(html[data-theme="dark"]) .contact-profile-links {
+  --contact-chip-bg: rgba(255, 255, 255, 0.08);
+  --contact-chip-border: rgba(80, 220, 255, 0.28);
+  --contact-chip-color: var(--color-text-400);
+  --contact-chip-hover-bg: var(--color-accent-400);
+  --contact-chip-hover-border: var(--color-accent-400);
+  --contact-chip-hover-color: #ffffff;
 }
 </style>

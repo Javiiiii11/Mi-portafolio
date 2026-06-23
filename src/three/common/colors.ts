@@ -5,7 +5,7 @@ export const colors = {
   beigeDark: new Color("rgb(233, 222, 208)"),
   beigeLight: new Color("#f5efe6"),
   darkBg: new Color("#1a1f28"),
-  darkContactBg: new Color("#1a1f28"),
+  darkContactBg: new Color("#12161d"),
   darkShadow: new Color("rgb(60, 60, 60)"),
 };
 
@@ -26,7 +26,7 @@ export const getContactBackgroundColor = (): Color => {
 export const getContactShadowColor = (): Color => {
   if (!theme || !theme.value) return new Color("rgb(208, 185, 156)");
   // Una sombra más oscura y dramática para dar profundidad
-  return theme.value === "dark" ? new Color("rgb(40, 45, 55)") : new Color("rgb(208, 185, 156)");
+  return theme.value === "dark" ? new Color("rgb(24, 29, 38)") : new Color("rgb(208, 185, 156)");
 };
 
 // Función para obtener el color de sombra según el tema

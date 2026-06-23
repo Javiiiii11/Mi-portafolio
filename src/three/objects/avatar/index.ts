@@ -12,6 +12,7 @@ import headVertexShader from "../../shaders/avatar-head/vertex.glsl";
 import headFragmentShader from "../../shaders/avatar-head/fragment.glsl";
 import gsap from "gsap";
 import { aboutProgress } from "../../../animations/transitions/about";
+import { sizes } from "../../../utils/sizes";
 //import { avatarHologram } from "./hologram";
 
 import type { Material, Bone, Texture } from "three";
@@ -25,7 +26,10 @@ const waypointsPosition = new Vector3();
 const waypointsRotation = new Euler();
 const transform = new Group();
 const uniforms = { uProgress: { value: 0 }, uAmbientStrength: { value: 0 } };
-const contactPosition = new Vector3(0, -13, 0);
+const contactPosition = {
+  portrait: new Vector3(1.2, -13.75, 0),
+  landscape: new Vector3(0, -13, 0),
+};
 const contactRotation = new Euler(0, -Math.PI, 0);
 
 const init = () => {
@@ -135,7 +139,7 @@ const tick = () => {
   const isContact = sceneWeights.contact > 0.001;
 
   if (isContact) {
-    transform.position.copy(contactPosition);
+    transform.position.copy(sizes.isLandscape ? contactPosition.landscape : contactPosition.portrait);
     transform.rotation.copy(contactRotation);
     uniforms.uProgress.value = 0;
     uniforms.uAmbientStrength.value = 0;

@@ -156,4 +156,9 @@ onMounted(loadPreviews);
     }
   }
 }
+
+:global(html[data-theme="dark"]) .projects-notch-end {
+  color: #12161d;
+  --icon-color: #12161d;
+}
 </style>

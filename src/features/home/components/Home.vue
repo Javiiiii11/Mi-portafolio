@@ -221,7 +221,7 @@ watch(
   &-contact {
     width: 100%;
     min-height: calc(var(--lvh) * 100);
-    max-height: calc(var(--lvh) * 100);
+    position: relative;
   }
 }
 
@@ -253,6 +253,7 @@ watch(
   max-height: calc(var(--lvh) * 100);
   min-height: calc(var(--lvh) * 100);
   overflow: hidden;
+  z-index: 1;
 }
 
 .intro-about-hidden {
