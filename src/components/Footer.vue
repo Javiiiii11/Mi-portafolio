@@ -19,6 +19,8 @@ interface Props {
 }
 
 const emailCopied = ref(false);
+const cvPath = `${import.meta.env.BASE_URL}curriculum%20Javier%20Rodr%C3%ADguez.pdf`;
+const cvFileName = "curriculum Javier Rodríguez.pdf";
 
 const handleBackToTop = () => {
   if (!lenis.value) return;
@@ -27,25 +29,27 @@ const handleBackToTop = () => {
 
 const handleDownloadCV = () => {
   const link = document.createElement("a");
-  link.href = "/curriculum Javier Rodríguez.pdf";
-  link.download = "curriculum Javier Rodríguez.pdf";
+  link.href = cvPath;
+  link.download = cvFileName;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 };
 
 const handleCopyEmail = async () => {
+  const email = profile.value.email;
+
   try {
-    await navigator.clipboard.writeText(profile.email);
+    await navigator.clipboard.writeText(email);
     emailCopied.value = true;
     setTimeout(() => {
       emailCopied.value = false;
     }, 2000);
   } catch (error) {
     console.error("Error al copiar email:", error);
-    // Fallback: intentar con el método antiguo
+    // Fallback for browsers that block the Clipboard API.
     const textarea = document.createElement("textarea");
-    textarea.value = profile.email;
+    textarea.value = email;
     document.body.appendChild(textarea);
     textarea.select();
     document.execCommand("copy");
