@@ -15,6 +15,7 @@ import cursorPythonCertificate from "../../assets/images/certificates/Cursor_con
 import formula1Certificate from "../../assets/images/certificates/lidera_a_toda_velocidad_lecciones_de_la_formula_1.png";
 import chatgptFundamentalsCertificate from "../../assets/images/certificates/fundamentos_de_chatgpt.png";
 import cyberFundamentalsCertificate from "../../assets/images/certificates/Fundamentos_de_ciberseguridad.png";
+import storytellingMarketingCertificate from "../../assets/images/certificates/Storytelling_en_el_Marketing_Digital.png";
 
 export type Profile = {
   name: string;
@@ -285,6 +286,14 @@ export const certificatesCompleted: CertificateEntry[] = [
     image: chatgptFundamentalsCertificate,
     imageAlt: "Certificado de Fundamentos de ChatGPT",
   },
+  {
+    title: "Storytelling en el Marketing Digital",
+    issuer: "Google / Santander Open Academy",
+    category: "Otros",
+    date: "2026",
+    image: storytellingMarketingCertificate,
+    imageAlt: "Certificado de Storytelling en el Marketing Digital",
+  },
 ];
 
 export const certificatesPending: CertificateEntry[] = [
@@ -326,12 +335,6 @@ export const certificatesPending: CertificateEntry[] = [
   },
   {
     title: "Innovación y Creatividad: Desarrolla tu Pensamiento Creativo",
-    issuer: "Google / Santander Open Academy",
-    category: "Otros",
-    date: "2026",
-  },
-  {
-    title: "Storytelling en el Marketing Digital",
     issuer: "Google / Santander Open Academy",
     category: "Otros",
     date: "2026",
