@@ -26,6 +26,17 @@ type CertificateView = (typeof certificatesCompleted)[number] & {
   imageAlt?: string;
 };
 
+type CredentialModalView = {
+  title: string;
+  category: string;
+  details: Array<{
+    label: string;
+    value: string;
+  }>;
+  image?: string;
+  imageAlt?: string;
+};
+
 const iconComponents: Record<string, any> = {
   Heart,
   Droplet,
@@ -63,13 +74,40 @@ const pendingCertificates = computed(() =>
 const allCertificates = computed(() => [...completedCertificates.value, ...pendingCertificates.value]);
 
 const wrapperRef = ref<HTMLElement | null>(null);
-const selectedCertificateModal = ref<CertificateView | null>(null);
+const selectedCertificateModal = ref<CredentialModalView | null>(null);
 const showCertificateModal = ref(false);
 let animationContext: gsap.Context | null = null;
 
 const openCertificateModal = (certificate: CertificateView) => {
   if (certificate.state === 'completed') {
-    selectedCertificateModal.value = certificate;
+    selectedCertificateModal.value = {
+      title: certificate.title,
+      category: certificate.category,
+      details: [
+        { label: t('platform'), value: certificate.issuer },
+        { label: t('year-completed'), value: certificate.date },
+      ],
+      image: certificate.image,
+      imageAlt: certificate.imageAlt,
+    };
+    showCertificateModal.value = true;
+  }
+};
+
+const openTitleModal = (entry: (typeof academicTitles.value)[number]) => {
+  if (entry.image) {
+    selectedCertificateModal.value = {
+      title: entry.title,
+      category: entry.issuer,
+      details: [
+        { label: t('center'), value: entry.center || entry.issuer },
+        ...(entry.academicYear ? [{ label: t('academic-year'), value: entry.academicYear }] : []),
+        { label: t('description'), value: entry.note },
+        ...(entry.focus ? [{ label: t('focus'), value: entry.focus }] : []),
+      ],
+      image: entry.image,
+      imageAlt: entry.imageAlt,
+    };
     showCertificateModal.value = true;
   }
 };
@@ -146,7 +184,16 @@ onBeforeUnmount(() => {
             <h3 class="credentials-section-title">{{ t('academic-titles') }}</h3>
           </div>
           <div class="credentials-cards credentials-cards-academic">
-            <article v-for="entry in academicTitles" :key="entry.title" class="credentials-card">
+            <button
+              v-for="entry in academicTitles"
+              :key="entry.title"
+              type="button"
+              class="credentials-card"
+              :class="{ 'credentials-card-certificate-completed': entry.image }"
+              :disabled="!entry.image"
+              :data-cursor="entry.image ? 'search' : undefined"
+              @click="openTitleModal(entry)"
+            >
               <p class="credentials-card-issuer">{{ entry.issuer }}</p>
               <div class="credentials-card-title-with-icon">
                 <component v-if="entry.icon" :is="getIconComponent(entry.icon)" class="credentials-card-icon" />
@@ -156,7 +203,7 @@ onBeforeUnmount(() => {
               <div class="credentials-card-tags">
                 <span v-for="tag in entry.tags" :key="tag" class="credentials-card-tag">{{ tag }}</span>
               </div>
-            </article>
+            </button>
           </div>
         </div>
 
@@ -247,8 +294,13 @@ onBeforeUnmount(() => {
             <div class="credentials-modal-info">
               <p class="credentials-modal-category">{{ selectedCertificateModal.category }}</p>
               <h3 class="credentials-modal-title">{{ selectedCertificateModal.title }}</h3>
-              <p class="credentials-modal-issuer"><strong>{{ t('platform') }}:</strong> {{ selectedCertificateModal.issuer }}</p>
-              <p class="credentials-modal-date"><strong>{{ t('year-completed') }}:</strong> {{ selectedCertificateModal.date }}</p>
+              <p
+                v-for="detail in selectedCertificateModal.details"
+                :key="detail.label"
+                class="credentials-modal-detail"
+              >
+                <strong>{{ detail.label }}:</strong> {{ detail.value }}
+              </p>
             </div>
           </div>
         </div>
@@ -701,14 +753,9 @@ onBeforeUnmount(() => {
       color: var(--color-text-500);
     }
 
-    &-issuer {
+    &-detail {
       font-size: var(--font-size-md);
       line-height: var(--line-height-copy);
-      color: var(--color-text-400);
-    }
-
-    &-date {
-      font-size: var(--font-size-md);
       color: var(--color-text-400);
 
       strong {

@@ -15,6 +15,8 @@ import cursorPythonCertificate from "../../assets/images/certificates/Cursor_con
 import formula1Certificate from "../../assets/images/certificates/lidera_a_toda_velocidad_lecciones_de_la_formula_1.png";
 import chatgptFundamentalsCertificate from "../../assets/images/certificates/fundamentos_de_chatgpt.png";
 import cyberFundamentalsCertificate from "../../assets/images/certificates/Fundamentos_de_ciberseguridad.png";
+import smrTitleCertificate from "../../assets/images/certificates/SMR.png";
+import damTitleCertificate from "../../assets/images/certificates/DAM.png";
 
 import type { TitleEntry, CertificateEntry } from "./index";
 
@@ -28,17 +30,27 @@ export const academicTitles: TitleEntry[] = [
   },
   {
     title: "Degree in Microcomputer Systems and Networks (SMR)",
-    issuer: "Vocational Training",
-    note: "Technical training in systems and networks.",
-    tags: ["SMR", "Systems"],
+    issuer: "Intermediate vocational degree",
+    note: "Technical training in systems, networks and IT support.",
+    tags: ["SMR", "Systems", "Networks"],
     icon: "Cpu",
+    center: "IES Las Salinas",
+    academicYear: "2022/2023",
+    focus: "Installation, configuration and maintenance of computers, operating systems, local networks and technical support.",
+    image: smrTitleCertificate,
+    imageAlt: "Microcomputer Systems and Networks degree certificate",
   },
   {
     title: "Degree in Multiplatform Application Development (DAM)",
-    issuer: "Vocational Training",
-    note: "Multiplatform application development.",
-    tags: ["DAM", "Android"],
+    issuer: "Higher vocational degree",
+    note: "Multiplatform application development, databases and interfaces.",
+    tags: ["DAM", "Android", "Software"],
     icon: "Code",
+    center: "IES Las Salinas",
+    academicYear: "2024/2025",
+    focus: "Programming, databases, mobile development, user interfaces and multiplatform applications.",
+    image: damTitleCertificate,
+    imageAlt: "Multiplatform Application Development degree certificate",
   },
   {
     title: "Master's Degree in Cybersecurity in ICT Environments",

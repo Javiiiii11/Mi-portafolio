@@ -16,6 +16,8 @@ import formula1Certificate from "../../assets/images/certificates/lidera_a_toda_
 import chatgptFundamentalsCertificate from "../../assets/images/certificates/fundamentos_de_chatgpt.png";
 import cyberFundamentalsCertificate from "../../assets/images/certificates/Fundamentos_de_ciberseguridad.png";
 import storytellingMarketingCertificate from "../../assets/images/certificates/Storytelling_en_el_Marketing_Digital.png";
+import smrTitleCertificate from "../../assets/images/certificates/SMR.png";
+import damTitleCertificate from "../../assets/images/certificates/DAM.png";
 
 export type Profile = {
   name: string;
@@ -35,6 +37,11 @@ export type TitleEntry = {
   note: string;
   tags: readonly string[];
   icon?: string; // Icon component name
+  center?: string;
+  academicYear?: string;
+  focus?: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export type CertificateEntry = {
@@ -69,17 +76,27 @@ export const academicTitles: TitleEntry[] = [
   },
   {
     title: "Grado medio en Sistemas Microinformáticos y Redes (SMR)",
-    issuer: "FP",
-    note: "Formación técnica en sistemas y redes.",
-    tags: ["SMR", "Sistemas"],
+    issuer: "Grado medio",
+    note: "Formación técnica en sistemas, redes y soporte informático.",
+    tags: ["SMR", "Sistemas", "Redes"],
     icon: "Cpu",
+    center: "IES Las Salinas",
+    academicYear: "2022/2023",
+    focus: "Instalación, configuración y mantenimiento de equipos, sistemas operativos, redes locales y soporte técnico.",
+    image: smrTitleCertificate,
+    imageAlt: "Título de Grado medio en Sistemas Microinformáticos y Redes",
   },
   {
     title: "Grado superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
-    issuer: "FP",
-    note: "Desarrollo de aplicaciones multiplataforma.",
-    tags: ["DAM", "Android"],
+    issuer: "Grado superior",
+    note: "Desarrollo de aplicaciones multiplataforma, bases de datos e interfaces.",
+    tags: ["DAM", "Android", "Software"],
     icon: "Code",
+    center: "IES Las Salinas",
+    academicYear: "2024/2025",
+    focus: "Programación, bases de datos, desarrollo móvil, interfaces de usuario y aplicaciones multiplataforma.",
+    image: damTitleCertificate,
+    imageAlt: "Título de Grado superior en Desarrollo de Aplicaciones Multiplataforma",
   },
   {
     title: "Máster de ciberseguridad en entornos TIC",

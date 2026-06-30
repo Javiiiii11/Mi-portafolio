@@ -21,6 +21,9 @@
   "contact-linkedin": "LinkedIn",
   "contact-phone": "Phone",
   "description": "Description",
+  "center": "Center",
+  "academic-year": "Year",
+  "focus": "Focus",
   "disable-sounds": "Disable sounds",
   "enable-sounds": "Enable sounds",
   "education": "Education",
@@ -56,6 +59,7 @@
   "close": "Close",
   "year-completed": "Year completed",
   "platform": "Platform",
+  "issuer": "Issuer",
   "download-cv": "Download CV",
   "copy-email": "Copy Email",
   "email-copied": "Email copied!"
